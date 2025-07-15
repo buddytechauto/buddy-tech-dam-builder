@@ -59,7 +59,7 @@ const Index = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">
-                  Stop Gathering One Stick at a Time
+                  Your Buddy in IT Automation
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   Buddy Tech helps you automate your tedious tasks so you can focus on building your business. 
