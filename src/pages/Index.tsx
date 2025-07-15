@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Clock, DollarSign, TrendingUp, Users } from "lucide-react";
+import riverBackground from "@/assets/river-background.jpg";
 import beaverHero from "@/assets/beaver-hero.png";
 
 const Index = () => {
@@ -53,9 +54,20 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-muted/30 py-20">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section 
+        className="relative overflow-hidden py-20"
+        style={{
+          backgroundImage: `url(${riverBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Background overlay */}
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm"></div>
+        
+         <div className="container relative z-10">
+           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">
@@ -99,9 +111,9 @@ const Index = () => {
                 Your Buddy in IT Automation
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+           </div>
+         </div>
+       </section>
 
       {/* Scrollytelling Section */}
       <ScrollytellingSection />
