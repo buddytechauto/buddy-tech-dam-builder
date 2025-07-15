@@ -95,11 +95,6 @@ const Index = () => {
             </div>
 
             <div className="relative">
-              <img 
-                src={beaverHero} 
-                alt="Buddy Tech Beaver getting started with automation" 
-                className="w-full max-w-lg mx-auto"
-              />
               <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-medium shadow-lg">
                 Your Buddy in IT Automation
               </div>
