@@ -1,13 +1,13 @@
 import Layout from "@/components/Layout";
 import ScrollytellingSection from "@/components/ScrollytellingSection";
 import TimeCalculator from "@/components/TimeCalculator";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Clock, DollarSign, TrendingUp, Users } from "lucide-react";
 import riverBackground from "@/assets/river-background.jpg";
-import beaverHero from "@/assets/beaver-hero.png";
 
 const Index = () => {
   const benefits = [
@@ -64,33 +64,34 @@ const Index = () => {
         }}
       >
         {/* Background overlay */}
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-background/90 backdrop-blur-sm"></div>
         
-         <div className="container relative z-10">
-           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight">
-                  Your Buddy in IT Automation
-                </h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  Buddy Tech helps you automate your tedious tasks so you can focus on building your business. 
-                  Let's build your dam, the smart way.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8">
-                  <Link to="/contact">
-                    Get Your Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8">
-                  <Link to="/case-studies">See Success Stories</Link>
-                </Button>
-              </div>
+        <div className="container relative z-10">
+          <div className="max-w-6xl mx-auto text-center space-y-12">
+            {/* Main Headlines */}
+            <div className="space-y-6">
+              <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight">
+                Your Buddy in IT Automation
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                See the difference automation makes with Buddy Tech
+              </p>
+            </div>
 
-              <div className="flex items-center space-x-6 text-sm text-muted-foreground">
+            {/* Before/After Slider */}
+            <div className="max-w-5xl mx-auto">
+              <BeforeAfterSlider />
+            </div>
+
+            {/* Call to Action */}
+            <div className="space-y-6">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
+                <Link to="/contact">
+                  → Let's Build Your Automation
+                </Link>
+              </Button>
+              
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-accent" />
                   <span>Free 30-min consultation</span>
@@ -105,15 +106,9 @@ const Index = () => {
                 </div>
               </div>
             </div>
-
-            <div className="relative">
-              <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-lg font-medium shadow-lg">
-                Your Buddy in IT Automation
-              </div>
-            </div>
-           </div>
-         </div>
-       </section>
+          </div>
+        </div>
+      </section>
 
       {/* Scrollytelling Section */}
       <ScrollytellingSection />
