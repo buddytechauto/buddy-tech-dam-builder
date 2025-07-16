@@ -53,27 +53,16 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section 
-        className="relative overflow-hidden py-20"
-        style={{
-          backgroundImage: `url(${riverBackground})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Background overlay */}
-        <div className="absolute inset-0 bg-background/90 backdrop-blur-sm"></div>
-        
+      {/* Hero Section - Championship Ice Background */}
+      <section className="relative overflow-hidden py-20 bg-background">
         <div className="container relative z-10">
           <div className="max-w-6xl mx-auto text-center space-y-12">
-            {/* Main Headlines */}
+            {/* Main Headlines - Stadium Slate */}
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-bold text-primary leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
                 Your Buddy in IT Automation
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl md:text-2xl text-secondary max-w-3xl mx-auto leading-relaxed font-medium">
                 See the difference automation makes with Buddy Tech
               </p>
             </div>
@@ -83,25 +72,25 @@ const Index = () => {
               <BeforeAfterSlider />
             </div>
 
-            {/* Call to Action */}
+            {/* Call to Action - Giants Red Button */}
             <div className="space-y-6">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
                 <Link to="/contact">
                   → Let's Build Your Automation
                 </Link>
               </Button>
               
-              <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-secondary">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-accent" />
+                  <CheckCircle className="w-4 h-4 text-primary" />
                   <span>Free 30-min consultation</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-accent" />
+                  <CheckCircle className="w-4 h-4 text-primary" />
                   <span>No technical knowledge required</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-accent" />
+                  <CheckCircle className="w-4 h-4 text-primary" />
                   <span>See results in 30 days</span>
                 </div>
               </div>
@@ -113,12 +102,12 @@ const Index = () => {
       {/* Scrollytelling Section */}
       <ScrollytellingSection />
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-background">
+      {/* Features Block - White Background */}
+      <section className="py-20 bg-card">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Build Your Business Dam?</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-secondary">Why Build Your Business Dam?</h2>
+            <p className="text-xl text-foreground max-w-3xl mx-auto">
               Just like a well-built dam creates a steady, powerful flow of water, business automation 
               creates a steady, powerful flow of productivity.
             </p>
@@ -126,15 +115,15 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center border-none shadow-lg hover:shadow-xl transition-shadow">
+              <Card key={index} className="text-center border-none shadow-lg hover:shadow-xl transition-shadow bg-card">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-accent" />
+                  <div className="w-16 h-16 bg-tertiary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-tertiary" />
                   </div>
-                  <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                  <CardTitle className="text-xl text-secondary">{benefit.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{benefit.description}</CardDescription>
+                  <CardDescription className="text-base text-foreground">{benefit.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -149,32 +138,32 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-20 bg-background">
+      {/* Social Proof - White Background */}
+      <section className="py-20 bg-card">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">What Other Business Owners Are Saying</h2>
-            <p className="text-xl text-muted-foreground">
+            <h2 className="text-4xl font-bold mb-4 text-secondary">What Other Business Owners Are Saying</h2>
+            <p className="text-xl text-foreground">
               Don't just take our word for it – hear from businesses that have built their automation dams
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-none shadow-lg">
+              <Card key={index} className="border-none shadow-lg bg-card">
                 <CardHeader>
                   <div className="flex space-x-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-accent text-lg">★</span>
+                      <span key={i} className="text-primary text-lg">★</span>
                     ))}
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <blockquote className="text-lg italic">"{testimonial.quote}"</blockquote>
+                  <blockquote className="text-lg italic text-foreground">"{testimonial.quote}"</blockquote>
                   <div className="flex items-center space-x-3">
                     <div>
-                      <p className="font-semibold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                      <p className="font-semibold text-secondary">{testimonial.author}</p>
+                      <p className="text-sm text-tertiary">{testimonial.company}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -184,37 +173,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5">
+      {/* Final CTA Section - Maple Leafs Blue Background */}
+      <section className="py-20 bg-secondary">
         <div className="container text-center">
           <div className="max-w-4xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">
+            <h2 className="text-4xl md:text-5xl font-bold text-card">
               Ready to Build Your Masterpiece?
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-card leading-relaxed">
               Let's chat about your business. Our 30-minute consultation is free, friendly, and jargon-free. 
               You'll walk away with a clear understanding of what's possible and a roadmap to get there.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8">
                 <Link to="/contact">
                   Book Your Free Call <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8">
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 border-card text-card hover:bg-card hover:text-secondary">
                 <Link to="/services">Explore Our Services</Link>
               </Button>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
-              <Badge variant="outline" className="bg-background/50">
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-card">
+              <Badge variant="outline" className="bg-card/10 border-card text-card">
                 ✓ No commitment required
               </Badge>
-              <Badge variant="outline" className="bg-background/50">
+              <Badge variant="outline" className="bg-card/10 border-card text-card">
                 ✓ Usually available within 24 hours
               </Badge>
-              <Badge variant="outline" className="bg-background/50">
+              <Badge variant="outline" className="bg-card/10 border-card text-card">
                 ✓ Get actionable advice immediately
               </Badge>
             </div>
