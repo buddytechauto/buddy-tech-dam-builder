@@ -8,39 +8,39 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Buddy Tech Brand Colors */
-    --background: 0 0% 99%;
-    --foreground: 215 86% 32%;
+    /* Sports-Inspired Brand Colors */
+    --background: 220 33% 96%;  /* Championship Ice */
+    --foreground: 240 7% 12%;   /* Stadium Slate */
 
     --card: 0 0% 100%;
-    --card-foreground: 215 86% 32%;
+    --card-foreground: 240 7% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 86% 32%;
+    --popover-foreground: 240 7% 12%;
 
-    /* Professional Blue as Primary */
-    --primary: 215 86% 32%;
+    /* Broncos Orange as Primary */
+    --primary: 17 96% 54%;      /* #FB4F14 */
     --primary-foreground: 0 0% 98%;
 
-    /* Warm Orange as Secondary/Accent */
-    --secondary: 24 89% 53%;
+    /* Maple Leafs Blue as Secondary */
+    --secondary: 219 100% 18%;  /* #00205B */
     --secondary-foreground: 0 0% 98%;
 
-    /* Earthy tones for muted elements */
-    --muted: 35 15% 95%;
-    --muted-foreground: 35 10% 45%;
+    /* Softer muted elements */
+    --muted: 220 25% 92%;
+    --muted-foreground: 240 7% 45%;
 
-    /* Orange accent for highlights */
-    --accent: 24 89% 53%;
+    /* Giants Red as Accent */
+    --accent: 348 73% 38%;      /* #A71930 */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    /* Natural, earthy borders */
-    --border: 35 15% 88%;
-    --input: 35 15% 88%;
-    --ring: 24 89% 53%;
+    /* Sports-themed borders */
+    --border: 220 25% 85%;
+    --input: 220 25% 85%;
+    --ring: 17 96% 54%;         /* Broncos Orange ring */
 
     --radius: 0.5rem;
 
@@ -62,34 +62,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    /* Dark theme maintains Buddy Tech branding */
-    --background: 215 40% 8%;
-    --foreground: 35 15% 95%;
+    /* Dark theme with sports colors */
+    --background: 240 7% 8%;     /* Dark Stadium Slate */
+    --foreground: 220 33% 95%;   /* Light Championship Ice */
 
-    --card: 215 40% 10%;
-    --card-foreground: 35 15% 95%;
+    --card: 240 7% 10%;
+    --card-foreground: 220 33% 95%;
 
-    --popover: 215 40% 10%;
-    --popover-foreground: 35 15% 95%;
+    --popover: 240 7% 10%;
+    --popover-foreground: 220 33% 95%;
 
-    --primary: 24 89% 53%;
-    --primary-foreground: 215 40% 8%;
+    --primary: 17 96% 54%;       /* Broncos Orange */
+    --primary-foreground: 240 7% 8%;
 
-    --secondary: 215 30% 20%;
-    --secondary-foreground: 35 15% 95%;
+    --secondary: 219 100% 25%;   /* Lighter Maple Leafs Blue */
+    --secondary-foreground: 220 33% 95%;
 
-    --muted: 215 30% 15%;
-    --muted-foreground: 35 10% 65%;
+    --muted: 240 7% 15%;
+    --muted-foreground: 220 25% 65%;
 
-    --accent: 24 89% 53%;
-    --accent-foreground: 215 40% 8%;
+    --accent: 348 73% 45%;       /* Lighter Giants Red */
+    --accent-foreground: 220 33% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 30% 20%;
-    --input: 215 30% 20%;
-    --ring: 24 89% 53%;
+    --border: 240 7% 20%;
+    --input: 240 7% 20%;
+    --ring: 17 96% 54%;          /* Broncos Orange ring */
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
