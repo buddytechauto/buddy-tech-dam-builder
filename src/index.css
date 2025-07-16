@@ -8,11 +8,11 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Sports-Inspired Brand Colors */
-    --background: 220 33% 96%;  /* Championship Ice */
-    --foreground: 240 7% 12%;   /* Stadium Slate */
+    /* Refined Sports-Inspired Brand Colors */
+    --background: 220 33% 96%;  /* Championship Ice #F2F4F8 */
+    --foreground: 240 7% 12%;   /* Stadium Slate #1C1C1E */
 
-    --card: 0 0% 100%;
+    --card: 0 0% 100%;          /* Maple Leafs White */
     --card-foreground: 240 7% 12%;
 
     --popover: 0 0% 100%;
@@ -20,19 +20,23 @@ All colors MUST be HSL.
 
     /* Broncos Orange as Primary */
     --primary: 17 96% 54%;      /* #FB4F14 */
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 100%;
 
     /* Maple Leafs Blue as Secondary */
     --secondary: 219 100% 18%;  /* #00205B */
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Softer muted elements */
-    --muted: 220 25% 92%;
+    /* Blue Jays Light Blue for muted elements */
+    --muted: 207 70% 92%;       /* Light Blue Jays Blue */
     --muted-foreground: 240 7% 45%;
 
-    /* Giants Red as Accent */
+    /* Giants Red for CTA buttons */
     --accent: 348 73% 38%;      /* #A71930 */
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Blue Jays Light Blue as tertiary */
+    --tertiary: 207 70% 67%;    /* #6EB4E7 */
+    --tertiary-foreground: 240 7% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
