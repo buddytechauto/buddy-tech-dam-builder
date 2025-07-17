@@ -41,10 +41,10 @@ const BeforeAfterSlider = () => {
             style={{ opacity: percentage < 60 ? 1 : 0.3 }}
           >
             <h3 className="text-3xl md:text-4xl font-bold text-destructive mb-3">
-              Still Doing This Manually?
+              The Manual Grind
             </h3>
             <p className="text-lg text-muted-foreground">
-              Wasting hours on repetitive tasks?
+              How many hours are lost to tasks that could be running on their own? Your talent is wasted on copy & paste
             </p>
           </div>
         </div>
