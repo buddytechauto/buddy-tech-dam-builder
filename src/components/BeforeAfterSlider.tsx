@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Slider } from "@/components/ui/slider";
 import buddyBefore from "@/assets/buddy-before-automation.png";
 import buddyAfter from "@/assets/buddy-after-automation.png";
 
 const BeforeAfterSlider = () => {
-  const [sliderValue, setSliderValue] = useState([5]);
+  const [sliderValue, setSliderValue] = useState([1]);
+  const [showGuide, setShowGuide] = useState(false);
   const percentage = sliderValue[0];
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGuide(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="relative w-full h-[500px] bg-background rounded-xl overflow-hidden shadow-2xl">
@@ -94,10 +103,29 @@ const BeforeAfterSlider = () => {
       </div>
 
       {/* Visual Cue for Initial State */}
-      {percentage < 15 && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="bg-primary/90 text-primary-foreground px-6 py-3 rounded-full text-lg font-medium shadow-lg animate-pulse">
-            👈 Slide to see the transformation
+      {percentage < 15 && showGuide && (
+        <div 
+          className="absolute flex items-center pointer-events-none z-20"
+          style={{ 
+            top: '50%', 
+            left: `${Math.max(percentage + 15, 20)}%`, 
+            transform: 'translateY(-50%)' 
+          }}
+        >
+          <div className="flex items-center gap-3">
+            {/* Beaver Paw Icon */}
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              className="text-primary animate-pulse"
+              fill="currentColor"
+            >
+              <path d="M8 4c0-.5.5-1 1-1s1 .5 1 1v2c0 .5-.5 1-1 1s-1-.5-1-1V4zm3 0c0-.5.5-1 1-1s1 .5 1 1v3c0 .5-.5 1-1 1s-1-.5-1-1V4zm3 0c0-.5.5-1 1-1s1 .5 1 1v2c0 .5-.5 1-1 1s-1-.5-1-1V4zM7 8c-1.1 0-2 .9-2 2v4c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4v-4c0-1.1-.9-2-2-2H7z"/>
+            </svg>
+            <div className="bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-pulse">
+              Go from Repeat to Reclaim
+            </div>
           </div>
         </div>
       )}
