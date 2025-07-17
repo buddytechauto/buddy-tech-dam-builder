@@ -59,7 +59,7 @@ const BeforeAfterSlider = () => {
               Work Less. Do More.
             </h3>
             <p className="text-lg text-muted-foreground">
-              Automation saves you time and reduces human error.
+              Reclaim your day. Let automation handle the predictable, so you can solve the exceptional.
             </p>
           </div>
         </div>
