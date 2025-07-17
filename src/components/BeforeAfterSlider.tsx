@@ -4,7 +4,7 @@ import buddyBefore from "@/assets/buddy-before-automation.png";
 import buddyAfter from "@/assets/buddy-after-automation.png";
 
 const BeforeAfterSlider = () => {
-  const [sliderValue, setSliderValue] = useState([50]);
+  const [sliderValue, setSliderValue] = useState([5]);
   const percentage = sliderValue[0];
 
   return (
@@ -38,7 +38,7 @@ const BeforeAfterSlider = () => {
         <div className="w-1/2 flex flex-col justify-center items-start p-8 text-left">
           <div 
             className="transition-opacity duration-300"
-            style={{ opacity: percentage < 60 ? 1 : 0.3 }}
+            style={{ opacity: percentage < 50 ? 1 : 0 }}
           >
             <h3 className="text-3xl md:text-4xl font-bold text-destructive mb-3">
               The Manual Grind
@@ -53,7 +53,7 @@ const BeforeAfterSlider = () => {
         <div className="w-1/2 flex flex-col justify-center items-end p-8 text-right">
           <div 
             className="transition-opacity duration-300"
-            style={{ opacity: percentage > 40 ? 1 : 0.3 }}
+            style={{ opacity: percentage >= 50 ? 1 : 0 }}
           >
             <h3 className="text-3xl md:text-4xl font-bold text-primary mb-3">
               Work Less. Do More.
@@ -92,6 +92,15 @@ const BeforeAfterSlider = () => {
           </div>
         </div>
       </div>
+
+      {/* Visual Cue for Initial State */}
+      {percentage < 15 && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="bg-primary/90 text-primary-foreground px-6 py-3 rounded-full text-lg font-medium shadow-lg animate-pulse">
+            👈 Slide to see the transformation
+          </div>
+        </div>
+      )}
 
       {/* Before/After Labels */}
       <div className="absolute top-4 left-4">
