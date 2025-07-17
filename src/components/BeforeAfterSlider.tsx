@@ -5,16 +5,8 @@ import buddyAfter from "@/assets/buddy-after-automation.png";
 
 const BeforeAfterSlider = () => {
   const [sliderValue, setSliderValue] = useState([1]);
-  const [showGuide, setShowGuide] = useState(false);
   const percentage = sliderValue[0];
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowGuide(true);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="relative w-full h-[500px] bg-background rounded-xl overflow-hidden shadow-2xl">
@@ -79,8 +71,8 @@ const BeforeAfterSlider = () => {
         className="absolute top-0 bottom-0 w-1 bg-primary/80 shadow-lg transition-all duration-300 z-10"
         style={{ left: `${percentage}%`, transform: 'translateX(-50%)' }}
       >
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-primary rounded-full shadow-lg flex items-center justify-center">
-          <div className="w-1 h-4 bg-primary-foreground rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-primary rounded-full shadow-lg flex items-center justify-center animate-pulse">
+          <div className="w-1 h-4 bg-primary-foreground rounded-full animate-[wiggle_3s_ease-in-out_infinite]"></div>
         </div>
       </div>
 
@@ -95,52 +87,25 @@ const BeforeAfterSlider = () => {
             step={1}
             className="w-full"
           />
-          <div className="flex justify-between text-xs text-muted-foreground mt-2">
-            <span>Before</span>
-            <span>After</span>
-          </div>
         </div>
       </div>
 
-      {/* Visual Cue for Initial State */}
-      {percentage < 15 && showGuide && (
-        <div 
-          className="absolute flex items-center pointer-events-none z-20"
-          style={{ 
-            top: '50%', 
-            left: `${Math.max(percentage + 15, 20)}%`, 
-            transform: 'translateY(-50%)' 
-          }}
-        >
-          <div className="flex items-center gap-3">
-            {/* Beaver Paw Icon */}
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              className="text-primary animate-pulse"
-              fill="currentColor"
-            >
-              <path d="M8 4c0-.5.5-1 1-1s1 .5 1 1v2c0 .5-.5 1-1 1s-1-.5-1-1V4zm3 0c0-.5.5-1 1-1s1 .5 1 1v3c0 .5-.5 1-1 1s-1-.5-1-1V4zm3 0c0-.5.5-1 1-1s1 .5 1 1v2c0 .5-.5 1-1 1s-1-.5-1-1V4zM7 8c-1.1 0-2 .9-2 2v4c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4v-4c0-1.1-.9-2-2-2H7z"/>
-            </svg>
-            <div className="bg-primary/90 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium shadow-lg animate-pulse">
-              Go from Repeat to Reclaim
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Before/After Labels */}
-      <div className="absolute top-4 left-4">
-        <span className="bg-destructive/90 text-destructive-foreground px-3 py-1 rounded-full text-sm font-medium">
-          Before
-        </span>
-      </div>
-      <div className="absolute top-4 right-4">
-        <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-          After
-        </span>
-      </div>
+      {percentage < 50 && (
+        <div className="absolute top-4 left-4">
+          <span className="bg-destructive/90 text-destructive-foreground px-3 py-1 rounded-full text-sm font-medium">
+            Before
+          </span>
+        </div>
+      )}
+      {percentage >= 50 && (
+        <div className="absolute top-4 right-4">
+          <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+            After
+          </span>
+        </div>
+      )}
     </div>
   );
 };
