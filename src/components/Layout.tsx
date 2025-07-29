@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={buddyLogo} alt="Buddy Tech" className="h-8 w-8" />
+            <img src={buddyLogo} alt="Buddy Tech" className="h-8 w-8 dark:invert" />
             <span className="text-xl font-bold text-primary">Buddy Tech</span>
           </Link>
 
@@ -60,7 +60,7 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <img src={buddyLogo} alt="Buddy Tech" className="h-6 w-6" />
+                <img src={buddyLogo} alt="Buddy Tech" className="h-6 w-6 dark:invert" />
                 <span className="font-bold text-primary">Buddy Tech</span>
               </div>
               <p className="text-sm text-muted-foreground">
