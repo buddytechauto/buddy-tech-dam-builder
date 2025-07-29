@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Slider } from "@/components/ui/slider";
-import buddyBefore from "@/assets/buddy-before-automation.png";
 import buddyAfter from "@/assets/buddy-after-automation.png";
 
 const BeforeAfterSlider = () => {
@@ -13,7 +12,7 @@ const BeforeAfterSlider = () => {
       {/* Before Image (Background) */}
       <div className="absolute inset-0">
         <img 
-          src={buddyBefore} 
+          src="/lovable-uploads/97fb18e5-df1d-45ac-8252-6dbb30cca52d.png" 
           alt="Buddy before automation - overwhelmed with manual tasks"
           className="w-full h-full object-cover"
         />
