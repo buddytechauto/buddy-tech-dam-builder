@@ -35,7 +35,7 @@ const BeforeAfterSlider = () => {
       {/* Text Overlays */}
       <div className="absolute inset-0 flex">
         {/* Before Text (Left Side) */}
-        <div className="w-1/2 flex flex-col justify-center items-start p-8 text-left">
+        <div className="w-1/2 flex flex-col justify-end items-start p-8 text-left">
           <div 
             className="transition-opacity duration-300"
             style={{ opacity: percentage < 50 ? 1 : 0 }}
