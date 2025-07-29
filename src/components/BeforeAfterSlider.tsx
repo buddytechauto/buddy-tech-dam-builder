@@ -37,7 +37,7 @@ const BeforeAfterSlider = () => {
         {/* Before Text (Left Side) */}
         <div className="w-1/2 flex flex-col justify-end items-start p-8 text-left">
           <div 
-            className="transition-opacity duration-300"
+            className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-6 border border-border/20"
             style={{ opacity: percentage < 50 ? 1 : 0 }}
           >
             <h3 className="text-3xl md:text-4xl font-bold text-destructive mb-3">
@@ -52,13 +52,13 @@ const BeforeAfterSlider = () => {
         {/* After Text (Right Side) */}
         <div className="w-1/2 flex flex-col justify-center items-end p-8 text-right">
           <div 
-            className="transition-opacity duration-300"
+            className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-6 border border-border/20"
             style={{ opacity: percentage >= 50 ? 1 : 0 }}
           >
             <h3 className="text-3xl md:text-4xl font-bold text-primary mb-3">
               Work Less. Do More.
             </h3>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground">
               Reclaim your day. Let automation handle the predictable, so you can solve the exceptional.
             </p>
           </div>
