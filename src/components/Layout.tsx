@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import buddyLogo from "@/assets/buddy-tech-logo.png";
+import buddyLogo from "/lovable-uploads/7d691065-5f6f-4e8b-b20b-185fb181cb22.png";
 
 interface LayoutProps {
   children: ReactNode;
