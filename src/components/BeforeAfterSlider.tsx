@@ -16,7 +16,6 @@ const BeforeAfterSlider = () => {
           alt="Buddy before automation - overwhelmed with manual tasks"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/20 to-background/5"></div>
       </div>
 
       {/* After Image (Revealed by slider) */}
@@ -29,7 +28,6 @@ const BeforeAfterSlider = () => {
           alt="Buddy after automation - relaxed and efficient"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-background/20 to-background/5"></div>
       </div>
 
       {/* Text Overlays - Centered above slider */}
