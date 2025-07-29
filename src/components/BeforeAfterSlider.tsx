@@ -43,7 +43,7 @@ const BeforeAfterSlider = () => {
             <h3 className="text-3xl md:text-4xl font-bold text-destructive mb-3">
               The Manual Grind
             </h3>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground">
               How many hours are lost to tasks that could be running on their own? Your talent is wasted on copy & paste
             </p>
           </div>
