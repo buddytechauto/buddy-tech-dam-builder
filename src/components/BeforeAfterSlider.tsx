@@ -32,36 +32,32 @@ const BeforeAfterSlider = () => {
         <div className="absolute inset-0 bg-gradient-to-l from-background/20 to-background/5"></div>
       </div>
 
-      {/* Text Overlays */}
-      <div className="absolute inset-0 flex">
-        {/* Before Text (Left Side) */}
-        <div className="w-1/2 flex flex-col justify-end items-start p-8 text-left">
-          <div 
-            className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-6 border border-border/20"
-            style={{ opacity: percentage < 50 ? 1 : 0 }}
-          >
-            <h3 className="text-3xl md:text-4xl font-bold text-destructive mb-3">
-              The Manual Grind
-            </h3>
-            <p className="text-lg text-foreground">
-              How many hours are lost to tasks that could be running on their own? Your talent is wasted on copy & paste
-            </p>
-          </div>
+      {/* Text Overlays - Centered above slider */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-auto">
+        {/* Before Text */}
+        <div 
+          className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-4 border border-border/20 text-center"
+          style={{ opacity: percentage < 50 ? 1 : 0 }}
+        >
+          <h3 className="text-xl md:text-2xl font-bold text-destructive mb-2">
+            The Manual Grind
+          </h3>
+          <p className="text-sm text-foreground max-w-xs">
+            Hours lost to tasks that could run automatically
+          </p>
         </div>
 
-        {/* After Text (Right Side) */}
-        <div className="w-1/2 flex flex-col justify-center items-end p-8 text-right">
-          <div 
-            className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-6 border border-border/20"
-            style={{ opacity: percentage >= 50 ? 1 : 0 }}
-          >
-            <h3 className="text-3xl md:text-4xl font-bold text-primary mb-3">
-              Work Less. Do More.
-            </h3>
-            <p className="text-lg text-foreground">
-              Reclaim your day. Let automation handle the predictable, so you can solve the exceptional.
-            </p>
-          </div>
+        {/* After Text */}
+        <div 
+          className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-4 border border-border/20 text-center absolute top-0 left-0"
+          style={{ opacity: percentage >= 50 ? 1 : 0 }}
+        >
+          <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
+            Work Less. Do More.
+          </h3>
+          <p className="text-sm text-foreground max-w-xs">
+            Reclaim your day with intelligent automation
+          </p>
         </div>
       </div>
 
