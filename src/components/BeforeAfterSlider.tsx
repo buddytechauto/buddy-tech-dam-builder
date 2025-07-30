@@ -38,7 +38,7 @@ const BeforeAfterSlider = () => {
           style={{ opacity: percentage < 50 ? 1 : 0 }}
         >
           <h3 className="text-xl md:text-2xl font-bold text-destructive mb-2">
-            The Manual Grind
+            Inbox Avalanche. Sound familiar?
           </h3>
           <p className="text-sm text-foreground max-w-xs">
             Hours lost to tasks that could run automatically
