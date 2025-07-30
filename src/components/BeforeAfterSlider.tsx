@@ -23,7 +23,7 @@ const BeforeAfterSlider = () => {
         <div style={{
         opacity: percentage < 50 ? 1 : 0
       }} className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-4 border border-border/20 text-center px-[14px] py-[10px] my-0 mx-[24px]">
-          <h3 className="text-xl md:text-2xl font-bold text-destructive mb-2">  Inbox Avalanche. 
+          <h3 className="text-xl md:text-2xl font-bold text-destructive mb-2">  Inbox Avalanche
 Sound familiar?</h3>
           <p className="text-foreground max-w-xs text-center mx-0 text-base">Still manually sifting through endless emails, feeling completely buried. 
  We've all been there.</p>
