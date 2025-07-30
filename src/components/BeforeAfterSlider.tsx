@@ -30,8 +30,8 @@ const BeforeAfterSlider = () => {
         />
       </div>
 
-      {/* Text Overlays - Centered above slider */}
-      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-auto">
+      {/* Text Overlays - Centered at top */}
+      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 w-auto">
         {/* Before Text */}
         <div 
           className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-4 border border-border/20 text-center"
