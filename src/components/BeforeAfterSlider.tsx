@@ -41,7 +41,7 @@ const BeforeAfterSlider = () => {
             Inbox Avalanche. Sound familiar?
           </h3>
           <p className="text-sm text-foreground max-w-xs">
-            Hours lost to tasks that could run automatically
+            Still manually sifting through endless emails, feeling completely buried. We've all been there.
           </p>
         </div>
 
