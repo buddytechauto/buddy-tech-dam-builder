@@ -1,146 +1,95 @@
-import { useState, useEffect } from "react";
-import scene1 from "@/assets/scene-1-chaotic-river.png";
-import scene2 from "@/assets/scene-2-struggling-stick.png";
-import scene3 from "@/assets/scene-3-lever-solution.png";
-import scene4 from "@/assets/scene-4-robotic-helper.png";
-import scene5 from "@/assets/scene-5-completed-dam.png";
+import { Button } from "@/components/ui/button";
+import { Play, ArrowRight, CheckCircle } from "lucide-react";
 
-const ScrollytellingSection = () => {
-  const [activeStep, setActiveStep] = useState(0);
-
-  const steps = [
-    {
-      title: "The Challenge",
-      description: "Every business owner faces the same overwhelming reality: endless repetitive tasks that steal time from what really matters.",
-      image: scene1,
-      stage: "Challenge"
-    },
-    {
-      title: "The Struggle",
-      description: "Doing everything manually means you're always one step behind, carrying one stick at a time while your competition flows past you.",
-      image: scene2,
-      stage: "Problem"
-    },
-    {
-      title: "The Smart Approach",
-      description: "We identify the repetitive tasks that slow you down and find clever ways to handle multiple processes at once.",
-      image: scene3,
-      stage: "Solution"
-    },
-    {
-      title: "Technology That Works For You",
-      description: "Our automation solutions work alongside you 24/7, handling the tedious stuff with precision while you focus on growing your business.",
-      image: scene4,
-      stage: "Implementation"
-    },
-    {
-      title: "Your Business, Perfected",
-      description: "Enjoy the peace of mind that comes with streamlined, error-free workflows. Your business dam is complete, and the results flow naturally.",
-      image: scene5,
-      stage: "Success"
-    }
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const sectionTop = document.getElementById("scrollytelling")?.offsetTop || 0;
-      const sectionHeight = document.getElementById("scrollytelling")?.offsetHeight || 1000;
-      
-      if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
-        const progress = (scrollY - sectionTop) / (sectionHeight - window.innerHeight);
-        const stepIndex = Math.min(Math.floor(progress * steps.length), steps.length - 1);
-        setActiveStep(Math.max(0, stepIndex));
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [steps.length]);
-
+const VideoSection = () => {
   return (
-    <section id="scrollytelling" className="relative bg-gradient-to-b from-background to-muted/30">
+    <section className="relative bg-gradient-to-b from-background to-muted/30 py-24">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 min-h-[400vh] relative">
-          {/* Sticky Visual */}
-          <div className="lg:sticky lg:top-20 lg:h-screen flex items-center">
-            <div className="w-full relative">
-              <div className="relative overflow-hidden rounded-2xl bg-background/50 backdrop-blur-sm p-8 shadow-2xl">
-                <img 
-                  src={steps[activeStep].image} 
-                  alt={steps[activeStep].title}
-                  className="w-full h-auto transition-all duration-700 ease-in-out transform hover:scale-105"
-                  style={{
-                    filter: `brightness(${0.8 + activeStep * 0.05}) contrast(${1 + activeStep * 0.1})`,
-                    transform: `scale(${0.95 + activeStep * 0.01})`
-                  }}
-                />
-                
-                {/* Ripple effect for water scenes */}
-                {(activeStep === 0 || activeStep === 4) && (
-                  <div className="absolute inset-0 pointer-events-none">
-                    <div className="absolute bottom-1/3 left-1/2 w-4 h-4 bg-primary/20 rounded-full animate-ping"></div>
-                    <div className="absolute bottom-1/4 right-1/3 w-3 h-3 bg-primary/15 rounded-full animate-ping animation-delay-300"></div>
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <CheckCircle className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Proven Results</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              See How Automation Transforms Businesses
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Watch real business owners share their automation success stories and discover 
+              how the right technology can unlock unprecedented growth and efficiency.
+            </p>
+          </div>
+
+          {/* Video Container */}
+          <div className="relative mb-12">
+            <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden shadow-2xl">
+              {/* Video Placeholder */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <div className="text-center space-y-6">
+                  <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto animate-pulse">
+                    <Play className="w-12 h-12 text-primary ml-1" />
                   </div>
-                )}
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold text-primary">From Chaos to Control</h3>
+                    <p className="text-muted-foreground">See the transformation in action</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Play Button Overlay */}
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center group cursor-pointer hover:bg-black/30 transition-colors">
+                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Play className="w-8 h-8 text-primary-foreground ml-1" />
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="space-y-16 lg:py-20">
-            {steps.map((step, index) => (
-              <div key={index} className="min-h-screen flex items-center">
-                <div className={`space-y-6 transition-all duration-500 ${
-                  activeStep === index 
-                    ? 'opacity-100 transform translate-x-0' 
-                    : 'opacity-50 transform translate-x-4'
-                }`}>
-                  <div className="flex items-center space-x-4">
-                    <div className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      activeStep === index ? 'bg-accent scale-125' : 'bg-muted-foreground/30'
-                    }`}></div>
-                    <span className="text-sm font-medium text-accent uppercase tracking-wide">
-                      {step.stage}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-3xl md:text-4xl font-bold text-primary">
-                    {step.title}
-                  </h3>
-                  
-                  <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-                    {step.description}
-                  </p>
-
-                  {/* Progress indicator */}
-                  <div className="flex space-x-2 pt-4">
-                    {steps.map((_, i) => (
-                      <div
-                        key={i}
-                        className={`h-1 rounded-full transition-all duration-300 ${
-                          i <= activeStep ? 'bg-accent w-8' : 'bg-muted-foreground/20 w-4'
-                        }`}
-                      ></div>
-                    ))}
-                  </div>
+          {/* Call to Actions */}
+          <div className="text-center space-y-8">
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-6 h-6 text-primary" />
                 </div>
+                <h4 className="font-semibold text-primary">Real Results</h4>
+                <p className="text-sm text-muted-foreground">Actual case studies from businesses like yours</p>
               </div>
-            ))}
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="font-semibold text-primary">Proven Process</h4>
+                <p className="text-sm text-muted-foreground">Step-by-step automation implementation</p>
+              </div>
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="font-semibold text-primary">Fast ROI</h4>
+                <p className="text-sm text-muted-foreground">See returns within the first month</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8">
+                Get Your Free Automation Assessment
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8">
+                Download Success Stories
+              </Button>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              Join 500+ businesses already saving 15+ hours per week with automation
+            </p>
           </div>
         </div>
       </div>
-
-      {/* Scroll trigger areas */}
-      {steps.map((_, index) => (
-        <div 
-          key={index}
-          className="absolute w-full h-screen pointer-events-none"
-          style={{ top: `${index * 100}vh` }}
-        ></div>
-      ))}
     </section>
   );
 };
 
-export default ScrollytellingSection;
+export default VideoSection;
