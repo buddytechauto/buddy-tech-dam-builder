@@ -51,7 +51,7 @@ const BeforeAfterSlider = () => {
           style={{ opacity: percentage >= 50 ? 1 : 0 }}
         >
           <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
-            Work Less. Do More.
+            Caught in the Email Storm?
           </h3>
           <p className="text-sm text-foreground max-w-xs">
             Reclaim your day with intelligent automation
