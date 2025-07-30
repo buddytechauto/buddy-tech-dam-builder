@@ -24,7 +24,7 @@ const BeforeAfterSlider = () => {
         style={{ clipPath: `inset(0 ${100 - percentage}% 0 0)` }}
       >
         <img 
-          src={buddyAfter} 
+          src="/lovable-uploads/8607ff93-614a-459a-b758-00f9e85d9d57.png" 
           alt="Buddy after automation - relaxed and efficient"
           className="w-full h-full object-cover"
         />
