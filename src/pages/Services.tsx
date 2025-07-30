@@ -13,7 +13,7 @@ const Services = () => {
       subtitle: "Email & Communication Automation",
       description: "Keep your communications flowing smoothly with automated email sequences, follow-ups, and customer engagement workflows.",
       features: ["Email drip campaigns", "Customer onboarding sequences", "Lead nurturing automation", "Response management"],
-      price: "Starting at $500/month"
+      hoursSaved: "~15 hours/month"
     },
     {
       icon: FileText,
@@ -21,7 +21,7 @@ const Services = () => {
       subtitle: "Document & Report Automation", 
       description: "Transform hours of manual reporting into minutes of automated intelligence. Your documents, delivered on time, every time.",
       features: ["Automated report generation", "Invoice processing", "Contract management", "Compliance documentation"],
-      price: "Starting at $750/month"
+      hoursSaved: "~25 hours/month"
     },
     {
       icon: Database,
@@ -29,7 +29,7 @@ const Services = () => {
       subtitle: "Data Management & Integration",
       description: "Connect your scattered data sources into one powerful, organized system that works as hard as you do.",
       features: ["CRM integration", "Data synchronization", "Database optimization", "Custom dashboards"],
-      price: "Starting at $1,000/month"
+      hoursSaved: "~30 hours/month"
     },
     {
       icon: BarChart3,
@@ -37,7 +37,7 @@ const Services = () => {
       subtitle: "Business Intelligence & Insights",
       description: "See exactly where your business is flowing and where it might be getting stuck. Make decisions with confidence.",
       features: ["Real-time dashboards", "Performance metrics", "Trend analysis", "Predictive insights"],
-      price: "Starting at $800/month"
+      hoursSaved: "~20 hours/month"
     },
     {
       icon: Cog,
@@ -45,7 +45,7 @@ const Services = () => {
       subtitle: "Workflow Optimization",
       description: "We'll redesign your business processes from the ground up, eliminating bottlenecks and building efficiency into every step.",
       features: ["Process mapping", "Workflow design", "Efficiency optimization", "Team training"],
-      price: "Custom pricing"
+      hoursSaved: "~40 hours/month"
     },
     {
       icon: Users,
@@ -53,7 +53,7 @@ const Services = () => {
       subtitle: "Collaboration & Project Management",
       description: "Get your whole team working in harmony with automated project management and seamless collaboration tools.",
       features: ["Project automation", "Team workflows", "Task management", "Communication hubs"],
-      price: "Starting at $600/month"
+      hoursSaved: "~18 hours/month"
     }
   ];
 
@@ -95,7 +95,7 @@ const Services = () => {
                   </ul>
                 </div>
                 <div className="mt-6 pt-4 border-t">
-                  <p className="font-semibold text-primary">{service.price}</p>
+                  <p className="font-semibold text-primary">{service.hoursSaved}</p>
                 </div>
               </CardContent>
             </Card>
