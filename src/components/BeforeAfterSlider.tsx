@@ -34,7 +34,7 @@ const BeforeAfterSlider = () => {
         {/* After Text */}
         <div style={{
         opacity: percentage >= 50 ? 1 : 0
-      }} className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-4 border border-border/20 text-center absolute top-0 left-0 mx-[37px]">
+      }} className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-4 border border-border/20 text-center absolute top-0 left-0 mx-[34px] my-[220px]">
           <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
             Caught in the Email Storm?
           </h3>
