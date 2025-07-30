@@ -26,7 +26,7 @@ const BeforeAfterSlider = () => {
           <h3 className="text-xl md:text-2xl font-bold text-destructive mb-2">
             Inbox Avalanche. Sound familiar?
           </h3>
-          <p className="text-sm text-foreground max-w-xs">
+          <p className="text-sm text-foreground max-w-xs text-center">
             Still manually sifting through endless emails, feeling completely buried. We've all been there.
           </p>
         </div>
