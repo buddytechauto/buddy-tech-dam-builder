@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -91,7 +92,7 @@ const CaseStudies = () => {
     <Layout>
       <div className="container py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <ScrollAnimatedSection className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Our Dams in Action</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             See how we've helped businesses like yours build better processes, save time, 
@@ -99,12 +100,13 @@ const CaseStudies = () => {
             success stories from real business owners who decided to stop gathering sticks 
             one at a time.
           </p>
-        </div>
+        </ScrollAnimatedSection>
 
         {/* Case Studies Grid */}
         <div className="space-y-12">
           {caseStudies.map((study, index) => (
-            <Card key={index} className="overflow-hidden">
+            <ScrollAnimatedSection key={index} animationDelay={index * 200}>
+              <Card className="overflow-hidden">
               <CardHeader className="bg-muted/30">
                 <div className="flex items-start justify-between">
                   <div>
@@ -166,13 +168,14 @@ const CaseStudies = () => {
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollAnimatedSection>
           ))}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16 bg-accent/5 rounded-lg p-12">
+        <ScrollAnimatedSection className="text-center mt-16 bg-accent/5 rounded-lg p-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Write Your Success Story?</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Every great dam starts with understanding the landscape. Let's explore how 
@@ -181,7 +184,7 @@ const CaseStudies = () => {
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
             <Link to="/contact">Start Your Free Consultation</Link>
           </Button>
-        </div>
+        </ScrollAnimatedSection>
       </div>
     </Layout>
   );

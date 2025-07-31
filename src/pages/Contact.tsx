@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -12,19 +13,20 @@ const Contact = () => {
     <Layout>
       <div className="container py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <ScrollAnimatedSection className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Ready to Build Your Masterpiece?</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Every great dam starts with a conversation. Let's chat about your business, 
             explore your challenges, and design the perfect automation solution. 
             Our consultation is free, friendly, and completely jargon-free.
           </p>
-        </div>
+        </ScrollAnimatedSection>
 
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <Card>
+            <ScrollAnimatedSection>
+              <Card>
               <CardHeader>
                 <CardTitle className="text-2xl">Tell Us About Your Business</CardTitle>
                 <CardDescription>
@@ -86,13 +88,15 @@ const Contact = () => {
                   Send My Message
                 </Button>
               </CardContent>
-            </Card>
+              </Card>
+            </ScrollAnimatedSection>
           </div>
 
           {/* Sidebar */}
           <div className="space-y-8">
             {/* Consultation Info */}
-            <Card className="border-accent/20">
+            <ScrollAnimatedSection animationDelay={200}>
+              <Card className="border-accent/20">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Calendar className="w-5 h-5 text-accent" />
@@ -126,11 +130,13 @@ const Contact = () => {
                     Usually available within 24 hours
                   </p>
                 </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollAnimatedSection>
 
             {/* Contact Info */}
-            <Card>
+            <ScrollAnimatedSection animationDelay={400}>
+              <Card>
               <CardHeader>
                 <CardTitle>Other Ways to Reach Us</CardTitle>
               </CardHeader>
@@ -158,11 +164,13 @@ const Contact = () => {
                     <p className="text-sm text-muted-foreground">Within 4 hours during business days</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollAnimatedSection>
 
             {/* Process Timeline */}
-            <Card className="bg-muted/30">
+            <ScrollAnimatedSection animationDelay={600}>
+              <Card className="bg-muted/30">
               <CardHeader>
                 <CardTitle>What Happens Next?</CardTitle>
               </CardHeader>
@@ -190,8 +198,9 @@ const Contact = () => {
                     <p className="text-xs text-muted-foreground">Custom automation plan for your business</p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollAnimatedSection>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Brain, Cpu, Database, Server, Shield, Cloud, Monitor } from "lucide-react";
@@ -10,6 +11,7 @@ const NerdyGnawledge = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-4xl text-center">
+            <ScrollAnimatedSection>
             <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               Nerdy Gnawledge
             </h1>
@@ -25,44 +27,53 @@ const NerdyGnawledge = () => {
                 So, grab a coffee (or whatever you drink when you're geeking out), and let's see how we build.
               </p>
             </div>
+            </ScrollAnimatedSection>
           </div>
         </section>
 
         {/* Philosophy Section */}
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl font-bold mb-4 text-center">Our Guiding Philosophy: The Master Blueprint</h2>
-            <p className="text-lg text-center text-muted-foreground mb-12">
-              We don't just stack technologies; we architect ecosystems. Our approach is built on three unbreakable pillars:
-            </p>
+            <ScrollAnimatedSection className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Our Guiding Philosophy: The Master Blueprint</h2>
+              <p className="text-lg text-muted-foreground">
+                We don't just stack technologies; we architect ecosystems. Our approach is built on three unbreakable pillars:
+              </p>
+            </ScrollAnimatedSection>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+              <ScrollAnimatedSection animationDelay={200}>
+                <Card className="border-primary/20 hover:border-primary/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-primary">Flexibility</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>No two rivers are the same. We use a hybrid, tool-agnostic approach to build the right solution, not just the easy one.</p>
                 </CardContent>
-              </Card>
+                </Card>
+              </ScrollAnimatedSection>
               
-              <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+              <ScrollAnimatedSection animationDelay={400}>
+                <Card className="border-primary/20 hover:border-primary/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-primary">Scalability</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>We build dams that can become lakes. Our systems are designed from day one to handle growth, ensuring the processes we build today will support you tomorrow.</p>
                 </CardContent>
-              </Card>
+                </Card>
+              </ScrollAnimatedSection>
               
-              <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+              <ScrollAnimatedSection animationDelay={600}>
+                <Card className="border-primary/20 hover:border-primary/40 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-primary">Security</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>A dam's most important job is to be impenetrable. Security isn't an afterthought; it's woven into the very foundation of everything we create.</p>
                 </CardContent>
-              </Card>
+                </Card>
+              </ScrollAnimatedSection>
             </div>
           </div>
         </section>
@@ -70,14 +81,17 @@ const NerdyGnawledge = () => {
         {/* The Log Stack Section */}
         <section className="py-16 px-4 bg-muted/30">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-3xl font-bold mb-4 text-center">The Log Stack: Core Components & Materials</h2>
-            <p className="text-lg text-center text-muted-foreground mb-12">
-              Here's a look at the trusted tools and technologies we use to construct our automated workflows.
-            </p>
+            <ScrollAnimatedSection className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">The Log Stack: Core Components & Materials</h2>
+              <p className="text-lg text-muted-foreground">
+                Here's a look at the trusted tools and technologies we use to construct our automated workflows.
+              </p>
+            </ScrollAnimatedSection>
 
             <div className="space-y-12">
               {/* Intelligence Layer */}
-              <div>
+              <ScrollAnimatedSection>
+                <div>
                 <div className="flex items-center gap-3 mb-6">
                   <Brain className="h-8 w-8 text-primary" />
                   <h3 className="text-2xl font-bold">The Brains (Intelligence Layer)</h3>
@@ -107,7 +121,8 @@ const NerdyGnawledge = () => {
                     </CardContent>
                   </Card>
                 </div>
-              </div>
+                </div>
+              </ScrollAnimatedSection>
 
               {/* Integration & Data */}
               <div>

@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 import ScrollytellingSection from "@/components/ScrollytellingSection";
 import TimeCalculator from "@/components/TimeCalculator";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -56,7 +57,7 @@ const Index = () => {
       {/* Hero Section - Championship Ice Background */}
       <section className="relative overflow-hidden py-20 bg-background">
         <div className="container relative z-10">
-          <div className="max-w-6xl mx-auto text-center space-y-12">
+          <ScrollAnimatedSection className="max-w-6xl mx-auto text-center space-y-12">
             {/* Main Headlines - Stadium Slate */}
             <div className="space-y-6">
               <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
@@ -95,37 +96,41 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollAnimatedSection>
         </div>
       </section>
 
       {/* Scrollytelling Section */}
-      <ScrollytellingSection />
+      <ScrollAnimatedSection>
+        <ScrollytellingSection />
+      </ScrollAnimatedSection>
 
       {/* Features Block - White Background */}
       <section className="py-20 bg-card">
         <div className="container">
-          <div className="text-center mb-16">
+          <ScrollAnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-secondary">Why Build Your Business Dam?</h2>
             <p className="text-xl text-foreground max-w-3xl mx-auto">
               Just like a well-built dam creates a steady, powerful flow of water, business automation 
               creates a steady, powerful flow of productivity.
             </p>
-          </div>
+          </ScrollAnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center border-none shadow-lg hover:shadow-xl transition-shadow bg-card">
+              <ScrollAnimatedSection key={index} animationDelay={index * 100}>
+                <Card className="text-center border-none shadow-lg hover:shadow-xl transition-shadow bg-card">
                 <CardHeader>
                   <div className="w-16 h-16 bg-tertiary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-tertiary" />
                   </div>
                   <CardTitle className="text-xl text-secondary">{benefit.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base text-foreground">{benefit.description}</CardDescription>
-                </CardContent>
-              </Card>
+                  <CardContent>
+                    <CardDescription className="text-base text-foreground">{benefit.description}</CardDescription>
+                  </CardContent>
+                </Card>
+              </ScrollAnimatedSection>
             ))}
           </div>
         </div>
@@ -134,23 +139,26 @@ const Index = () => {
       {/* Interactive Calculator */}
       <section className="py-20 bg-muted/30">
         <div className="container">
-          <TimeCalculator />
+          <ScrollAnimatedSection>
+            <TimeCalculator />
+          </ScrollAnimatedSection>
         </div>
       </section>
 
       {/* Social Proof - White Background */}
       <section className="py-20 bg-card">
         <div className="container">
-          <div className="text-center mb-16">
+          <ScrollAnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-secondary">What Other Business Owners Are Saying</h2>
             <p className="text-xl text-foreground">
               Don't just take our word for it – hear from businesses that have built their automation dams
             </p>
-          </div>
+          </ScrollAnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="border-none shadow-lg bg-card">
+              <ScrollAnimatedSection key={index} animationDelay={index * 150}>
+                <Card className="border-none shadow-lg bg-card">
                 <CardHeader>
                   <div className="flex space-x-1 mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -165,9 +173,10 @@ const Index = () => {
                       <p className="font-semibold text-secondary">{testimonial.author}</p>
                       <p className="text-sm text-tertiary">{testimonial.company}</p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimatedSection>
             ))}
           </div>
         </div>
@@ -176,7 +185,7 @@ const Index = () => {
       {/* Final CTA Section - Maple Leafs Blue Background */}
       <section className="py-20 bg-secondary">
         <div className="container text-center">
-          <div className="max-w-4xl mx-auto space-y-8">
+          <ScrollAnimatedSection className="max-w-4xl mx-auto space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-card">
               Ready to Build Your Masterpiece?
             </h2>
@@ -207,7 +216,7 @@ const Index = () => {
                 ✓ Get actionable advice immediately
               </Badge>
             </div>
-          </div>
+          </ScrollAnimatedSection>
         </div>
       </section>
     </Layout>

@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -61,18 +62,19 @@ const Services = () => {
     <Layout>
       <div className="container py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <ScrollAnimatedSection className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Our Dam-Building Services</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Every great dam is built with purpose. We'll help you choose the right combination 
             of automation tools to create a business that flows smoothly and scales effortlessly.
           </p>
-        </div>
+        </ScrollAnimatedSection>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="h-full flex flex-col">
+            <ScrollAnimatedSection key={index} animationDelay={index * 100}>
+              <Card className="h-full flex flex-col">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-2">
                   <div className="p-2 rounded-lg bg-accent/10">
@@ -97,13 +99,14 @@ const Services = () => {
                 <div className="mt-6 pt-4 border-t">
                   <p className="font-semibold text-primary">{service.hoursSaved}</p>
                 </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </ScrollAnimatedSection>
           ))}
         </div>
 
         {/* Process Section */}
-        <div className="bg-muted/30 rounded-lg p-8 mb-16">
+        <ScrollAnimatedSection className="bg-muted/30 rounded-lg p-8 mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">How We Build Your Dam</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -134,10 +137,10 @@ const Services = () => {
               </p>
             </div>
           </div>
-        </div>
+        </ScrollAnimatedSection>
 
         {/* CTA Section */}
-        <div className="text-center">
+        <ScrollAnimatedSection className="text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Building?</h2>
           <p className="text-xl text-muted-foreground mb-8">
             Let's discuss which services would work best for your business dam.
@@ -145,7 +148,7 @@ const Services = () => {
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
             <Link to="/contact">Schedule Your Free Consultation</Link>
           </Button>
-        </div>
+        </ScrollAnimatedSection>
       </div>
     </Layout>
   );
