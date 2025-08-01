@@ -73,7 +73,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>Custom-Built Automation for your business</span>
+                    <span>Tailored Automations</span>
                   </div>
                 </div>
               </div>
@@ -82,11 +82,7 @@ const Index = () => {
             {/* Right Image */}
             <ScrollAnimatedSection animationDelay={200} className="flex justify-center lg:justify-end">
               <div className="relative">
-                <img 
-                  src="/lovable-uploads/55ea4fd4-d461-4e92-b00d-404da1b94c54.png" 
-                  alt="Automation workflow illustration showing dam and water flow control" 
-                  className="w-full max-w-lg h-auto object-contain drop-shadow-2xl"
-                />
+                <img src="/lovable-uploads/55ea4fd4-d461-4e92-b00d-404da1b94c54.png" alt="Automation workflow illustration showing dam and water flow control" className="w-full max-w-lg h-auto object-contain drop-shadow-2xl" />
               </div>
             </ScrollAnimatedSection>
           </div>
