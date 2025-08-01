@@ -9,51 +9,38 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Clock, DollarSign, TrendingUp, Users } from "lucide-react";
 import riverBackground from "@/assets/river-background.jpg";
-
 const Index = () => {
-  const benefits = [
-    {
-      icon: Clock,
-      title: "Save Hours Every Week",
-      description: "Reclaim 10-30 hours monthly by automating your most time-consuming tasks."
-    },
-    {
-      icon: DollarSign,
-      title: "Reduce Operating Costs",
-      description: "Cut manual labor costs while eliminating costly human errors."
-    },
-    {
-      icon: TrendingUp,
-      title: "Scale Without Stress",
-      description: "Handle 10x more work without hiring 10x more people."
-    },
-    {
-      icon: Users,
-      title: "Keep Your Personal Touch",
-      description: "Automation handles the repetitive stuff so you can focus on relationships."
-    }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Buddy Tech saved us 20 hours a week on invoicing. I actually have time to focus on growing the business now!",
-      author: "Sarah M.",
-      company: "The Marina Co."
-    },
-    {
-      quote: "Our follow-up rate went from 30% to 95%. Customers love how responsive we've become.",
-      author: "Mike D.",
-      company: "GreenThumb Landscaping"
-    },
-    {
-      quote: "The automated reports look so professional. Our clients think we've hired a whole new team!",
-      author: "Jennifer S.",
-      company: "Premier Real Estate"
-    }
-  ];
-
-  return (
-    <Layout>
+  const benefits = [{
+    icon: Clock,
+    title: "Save Hours Every Week",
+    description: "Reclaim 10-30 hours monthly by automating your most time-consuming tasks."
+  }, {
+    icon: DollarSign,
+    title: "Reduce Operating Costs",
+    description: "Cut manual labor costs while eliminating costly human errors."
+  }, {
+    icon: TrendingUp,
+    title: "Scale Without Stress",
+    description: "Handle 10x more work without hiring 10x more people."
+  }, {
+    icon: Users,
+    title: "Keep Your Personal Touch",
+    description: "Automation handles the repetitive stuff so you can focus on relationships."
+  }];
+  const testimonials = [{
+    quote: "Buddy Tech saved us 20 hours a week on invoicing. I actually have time to focus on growing the business now!",
+    author: "Sarah M.",
+    company: "The Marina Co."
+  }, {
+    quote: "Our follow-up rate went from 30% to 95%. Customers love how responsive we've become.",
+    author: "Mike D.",
+    company: "GreenThumb Landscaping"
+  }, {
+    quote: "The automated reports look so professional. Our clients think we've hired a whole new team!",
+    author: "Jennifer S.",
+    company: "Premier Real Estate"
+  }];
+  return <Layout>
       {/* Hero Section - Championship Ice Background */}
       <section className="relative overflow-hidden py-20 bg-background">
         <div className="container relative z-10">
@@ -76,9 +63,7 @@ const Index = () => {
             {/* Call to Action - Giants Red Button */}
             <div className="space-y-6">
               <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
-                <Link to="/contact">
-                  → Let's Build Your Automation
-                </Link>
+                <Link to="/contact">→ Control the Flow</Link>
               </Button>
               
               <div className="flex flex-wrap justify-center gap-6 text-sm text-secondary">
@@ -117,8 +102,7 @@ const Index = () => {
           </ScrollAnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <ScrollAnimatedSection key={index} animationDelay={index * 100}>
+            {benefits.map((benefit, index) => <ScrollAnimatedSection key={index} animationDelay={index * 100}>
                 <Card className="text-center border-none shadow-lg hover:shadow-xl transition-shadow bg-card">
                 <CardHeader>
                   <div className="w-16 h-16 bg-tertiary/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -130,8 +114,7 @@ const Index = () => {
                     <CardDescription className="text-base text-foreground">{benefit.description}</CardDescription>
                   </CardContent>
                 </Card>
-              </ScrollAnimatedSection>
-            ))}
+              </ScrollAnimatedSection>)}
           </div>
         </div>
       </section>
@@ -156,14 +139,11 @@ const Index = () => {
           </ScrollAnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <ScrollAnimatedSection key={index} animationDelay={index * 150}>
+            {testimonials.map((testimonial, index) => <ScrollAnimatedSection key={index} animationDelay={index * 150}>
                 <Card className="border-none shadow-lg bg-card">
                 <CardHeader>
                   <div className="flex space-x-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i} className="text-primary text-lg">★</span>
-                    ))}
+                    {[...Array(5)].map((_, i) => <span key={i} className="text-primary text-lg">★</span>)}
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -176,8 +156,7 @@ const Index = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </ScrollAnimatedSection>
-            ))}
+              </ScrollAnimatedSection>)}
           </div>
         </div>
       </section>
@@ -219,8 +198,6 @@ const Index = () => {
           </ScrollAnimatedSection>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
