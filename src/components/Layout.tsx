@@ -20,7 +20,8 @@ const Layout = ({ children }: LayoutProps) => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" style={{backgroundImage: `url('/lovable-uploads/f97b239a-0163-46eb-879a-65cf5150e20a.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed'}}>
+      <div className="min-h-screen bg-background/90">
       {/* Navigation */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
@@ -110,6 +111,7 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };

@@ -42,8 +42,7 @@ const Index = () => {
   }];
   return <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-background via-muted/20 to-secondary/10" style={{backgroundImage: `url('/lovable-uploads/df684c22-a8d3-4b3e-80ac-e77d4b97be60.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
-        <div className="absolute inset-0 bg-background/80"></div>
+      <section className="relative overflow-hidden py-20">
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Content */}
