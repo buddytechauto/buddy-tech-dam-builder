@@ -75,6 +75,10 @@ const Index = () => {
                     <CheckCircle className="w-4 h-4 text-primary" />
                     <span>Tailored Automations</span>
                   </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Save 10+ Hours Per Week</span>
+                  </div>
                 </div>
               </div>
             </ScrollAnimatedSection>
