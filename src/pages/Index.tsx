@@ -41,47 +41,55 @@ const Index = () => {
     company: "Premier Real Estate"
   }];
   return <Layout>
-      {/* Hero Section - Championship Ice Background */}
-      <section className="relative overflow-hidden py-20 bg-background">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 bg-gradient-to-br from-background via-muted/20 to-secondary/10">
         <div className="container relative z-10">
-          <ScrollAnimatedSection className="max-w-6xl mx-auto text-center space-y-12">
-            {/* Main Headlines - Stadium Slate */}
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
-                Your Buddy in IT Automation
-              </h1>
-              <p className="text-xl md:text-2xl text-secondary max-w-3xl mx-auto leading-relaxed font-medium">
-                See the difference automation makes with Buddy Tech
-              </p>
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left Content */}
+            <ScrollAnimatedSection className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+                  Stop the Outflow of Wasted Hours. Open the Floodgates to Productivity
+                </h1>
+                <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-2xl">
+                  Our automation systems stop the flood of repetitive tasks, saving you time and money to focus on what truly matters.
+                </p>
+              </div>
 
-            {/* Before/After Slider */}
-            <div className="max-w-5xl mx-auto">
-              <BeforeAfterSlider />
-            </div>
-
-            {/* Call to Action - Giants Red Button */}
-            <div className="space-y-6">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
-                <Link to="/contact">→ Control the Flow</Link>
-              </Button>
-              
-              <div className="flex flex-wrap justify-center gap-6 text-sm text-secondary">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  <span>Free 30-min consultation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  <span>No technical knowledge required</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  <span>See results in 30 days</span>
+              {/* Call to Action */}
+              <div className="space-y-6">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <Link to="/contact">Control the Flow</Link>
+                </Button>
+                
+                <div className="flex flex-wrap gap-6 text-sm text-secondary">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Free 30-min consultation</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>No technical knowledge required</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>See results in 30 days</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </ScrollAnimatedSection>
+            </ScrollAnimatedSection>
+
+            {/* Right Image */}
+            <ScrollAnimatedSection animationDelay={200} className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/55ea4fd4-d461-4e92-b00d-404da1b94c54.png" 
+                  alt="Automation workflow illustration showing dam and water flow control" 
+                  className="w-full max-w-lg h-auto object-contain drop-shadow-2xl"
+                />
+              </div>
+            </ScrollAnimatedSection>
+          </div>
         </div>
       </section>
 
