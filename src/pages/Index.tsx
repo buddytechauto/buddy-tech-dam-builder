@@ -73,7 +73,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>See results in 30 days</span>
+                    <span>Custom-Built Automation for your business</span>
                   </div>
                 </div>
               </div>
