@@ -49,10 +49,10 @@ const Index = () => {
             <ScrollAnimatedSection className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                  Stop the Outflow of Wasted Hours. Open the Floodgates to Productivity
+                  Business Process Automation That Saves 10+ Hours Weekly
                 </h1>
                 <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-2xl">
-                  Our automation systems stop the flood of repetitive tasks, saving you time and money to focus on what truly matters.
+                  Professional workflow automation services for small-to-medium businesses. Automate repetitive tasks, reduce operating costs, and scale without stress.
                 </p>
               </div>
 
@@ -102,10 +102,10 @@ const Index = () => {
       <section className="py-20 bg-card">
         <div className="container">
           <ScrollAnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-secondary">Why Build Your Business Dam?</h2>
+            <h2 className="text-4xl font-bold mb-4 text-secondary">Why Choose Business Process Automation?</h2>
             <p className="text-xl text-foreground max-w-3xl mx-auto">
-              Just like a well-built dam creates a steady, powerful flow of water, business automation 
-              creates a steady, powerful flow of productivity.
+              Transform your business operations with custom automation solutions that eliminate manual work, 
+              reduce errors, and create consistent, scalable processes.
             </p>
           </ScrollAnimatedSection>
 
@@ -140,9 +140,9 @@ const Index = () => {
       <section className="py-20 bg-card">
         <div className="container">
           <ScrollAnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-secondary">What Other Business Owners Are Saying</h2>
+            <h2 className="text-4xl font-bold mb-4 text-secondary">Business Automation Success Stories</h2>
             <p className="text-xl text-foreground">
-              Don't just take our word for it – hear from businesses that have built their automation dams
+              See how our automation services have transformed these businesses and saved them countless hours
             </p>
           </ScrollAnimatedSection>
 
@@ -188,7 +188,7 @@ const Index = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8 border-card text-card hover:bg-card hover:text-secondary">
-                <Link to="/services">Explore Our Services</Link>
+                <Link to="/services">View Automation Services</Link>
               </Button>
             </div>
 
