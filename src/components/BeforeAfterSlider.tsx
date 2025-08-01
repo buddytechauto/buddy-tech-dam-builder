@@ -24,7 +24,7 @@ const BeforeAfterSlider = () => {
         opacity: percentage < 50 ? 1 : 0
       }} className="transition-opacity duration-300 bg-background/80 backdrop-blur-sm rounded-lg p-4 border border-border/20 text-center py-[10px] my-0 mx-[80px] px-[4px]">
           <h3 className="font-bold text-destructive mb-2 text-lg md:text-3xl">Stop the Outflow of Wasted Hours. Open the Floodgates to Productivity.</h3>
-          <p className="text-foreground max-w-xs text-center mx-0 text-base">We help you redirect your most valuable resources from draining, repetitive tasks to a powerful current of automated growth.</p>
+          <p className="text-foreground max-w-xs text-center mx-0 text-base">Our automation systems stop the flood of repetitive tasks, saving you time and money to focus on what truly matters</p>
         </div>
 
         {/* After Text */}
