@@ -60,18 +60,22 @@ const Index = () => {
                   <Link to="/contact">Control the Flow</Link>
                 </Button>
                 
-                <div className="flex flex-col gap-4 text-sm text-secondary">
+                <div className="flex flex-wrap gap-6 text-sm text-secondary">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-primary" />
                     <span>Free 30-min consultation</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>Custom-built for your unique process</span>
+                    <span>No technical knowledge required</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>Save time, reduce cost, and focus on your bigger picture</span>
+                    <span>Save time, reduce cost, and focus on growth </span>
+                  </div>
+                  <div className="flex items-center space-x-2 px-[17px]">
+                    <CheckCircle className="w-4 h-4 text-primary" />
+                    <span>Save 10+ Hours Per Week</span>
                   </div>
                 </div>
               </div>
