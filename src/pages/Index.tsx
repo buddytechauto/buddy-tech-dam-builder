@@ -49,9 +49,7 @@ const Index = () => {
             <ScrollAnimatedSection className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">Automate your Dam business!</h1>
-                <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-2xl">
-                  Professional workflow automation services for small-to-medium businesses. Automate repetitive tasks, reduce operating costs, and scale without stress.
-                </p>
+                <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-2xl text-left px-0 mx-0 py-[2px] my-[13px]">Drowning in manual tasks and costly errors? Our automations act as the floodgates to efficiency, holding back the chaos and releasing a steady stream of productivity.</p>
               </div>
 
               {/* Call to Action */}
