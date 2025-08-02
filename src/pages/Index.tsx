@@ -71,8 +71,9 @@ const Index = () => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>Save time, reduce cost, and focus on your bigger picture </span>
+                    <span>Save time, reduce cost, and focus on growth </span>
                   </div>
+                  
                 </div>
               </div>
             </ScrollAnimatedSection>
