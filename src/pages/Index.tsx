@@ -55,7 +55,7 @@ const Index = () => {
               {/* Call to Action */}
               <div className="space-y-6">
                 <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300">
-                  <Link to="/contact">Open The Floodgates</Link>
+                  <Link to="/contact">Reclaim My Time</Link>
                 </Button>
                 
                 <div className="flex flex-col gap-4 text-sm text-secondary">
