@@ -79,7 +79,7 @@ const Index = () => {
             {/* Right Image */}
             <ScrollAnimatedSection animationDelay={200} className="flex justify-center lg:justify-end">
               <div className="relative">
-                <img src="/lovable-uploads/d5f19adc-3cfa-4946-9519-c474812dbb01.png" alt="Automation workflow illustration showing dam and water flow control" className="w-full max-w-3xl h-auto object-contain drop-shadow-2xl" />
+                <img src="/lovable-uploads/d5f19adc-3cfa-4946-9519-c474812dbb01.png" alt="Automation workflow illustration showing dam and water flow control" className="w-full max-w-5xl h-auto object-contain drop-shadow-2xl" />
               </div>
             </ScrollAnimatedSection>
           </div>
