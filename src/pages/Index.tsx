@@ -48,8 +48,7 @@ const Index = () => {
             {/* Left Content */}
             <ScrollAnimatedSection className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">Automate your Dam business! Work Less.
-Do more. </h1>
+                <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">Automate your Dam business!</h1>
                 <p className="text-lg md:text-xl text-secondary leading-relaxed max-w-2xl">
                   Professional workflow automation services for small-to-medium businesses. Automate repetitive tasks, reduce operating costs, and scale without stress.
                 </p>
