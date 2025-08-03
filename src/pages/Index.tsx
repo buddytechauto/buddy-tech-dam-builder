@@ -46,7 +46,7 @@ const Index = () => {
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Content */}
-            <ScrollAnimatedSection className="space-y-8">
+            <ScrollAnimatedSection className="space-y-8 bg-black/50 p-8 rounded-lg backdrop-blur-sm">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">Automate your Dam business!</h1>
                 <p className="text-lg text-secondary leading-relaxed max-w-2xl my-[13px] py-0 md:text-xl mx-px px-[2px] text-left">Drowning in manual tasks and costly errors? Our automations act as the floodgates to efficiency, holding back the chaos and releasing a steady stream of productivity.</p>
