@@ -42,7 +42,7 @@ const Index = () => {
   }];
   return <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20" style={{backgroundImage: `url('/lovable-uploads/51a5084a-9a85-4d35-bcdf-2b0a19e4d3e9.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+      <section className="relative overflow-hidden py-20" style={{backgroundImage: `url('/lovable-uploads/976d0c8e-cc2b-4a11-b889-355ad1cb1cd5.png')`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             {/* Left Content */}
