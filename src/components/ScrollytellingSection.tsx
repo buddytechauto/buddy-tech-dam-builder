@@ -1,156 +1,95 @@
-import { useEffect, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Play, ArrowRight, CheckCircle } from "lucide-react";
 
-const ScrollytellingSection = () => {
-  const [activeScene, setActiveScene] = useState(0);
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const textRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const scenes = [
-    {
-      id: 1,
-      title: "The Busy Beaver's Dilemma",
-      content: "Feeling like a busy beaver? Gnawing away at the same tasks, day after day?",
-      visual: "🦫📋"
-    },
-    {
-      id: 2,
-      title: "The Never-Ending Stream",
-      content: "The logs just keep floating in. It feels like you can barely keep your head above water. Dam, that's a lot of work.",
-      visual: "🪵🌊"
-    },
-    {
-      id: 3,
-      title: "A Smarter Approach",
-      content: "But woodn't it be nice if there was a smarter way to build? A blueprint for success?",
-      visual: "📐✨"
-    },
-    {
-      id: 4,
-      title: "Enter Automation",
-      content: "This is automation. It's your digital blueprint, telling every part of your business exactly where to go, automatically. No more guesswork.",
-      visual: "🤖⚙️"
-    },
-    {
-      id: 5,
-      title: "The Trigger",
-      content: "It all starts with a trigger. When a new log (a customer inquiry, a sale, a new file) enters the stream...",
-      visual: "⚡🎯"
-    },
-    {
-      id: 6,
-      title: "The Action",
-      content: "...your blueprint gets to work. It directs every piece of the puzzle, instantly. Creating folders, sending emails, updating lists—it all just flows.",
-      visual: "🔄💫"
-    },
-    {
-      id: 7,
-      title: "The Result",
-      content: "The result? A dam good structure, built in record time. And something you never thought you'd have again: free time.",
-      visual: "🏗️🎉"
-    },
-    {
-      id: 8,
-      title: "Your Business Blueprint",
-      content: "Your business is your dam. Stop logging tasks by hand and let automation streamline your workflow.",
-      visual: "📈🚀"
-    }
-  ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const sectionTop = sectionRef.current.offsetTop;
-      const sectionHeight = sectionRef.current.offsetHeight;
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-
-      // Calculate which scene should be active based on scroll position
-      const scrollProgress = (scrollY - sectionTop + windowHeight / 2) / sectionHeight;
-      const sceneIndex = Math.floor(scrollProgress * scenes.length);
-      const clampedIndex = Math.max(0, Math.min(scenes.length - 1, sceneIndex));
-
-      setActiveScene(clampedIndex);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [scenes.length]);
-
+const VideoSection = () => {
   return (
-    <section ref={sectionRef} className="relative min-h-[400vh] bg-gradient-to-b from-background to-muted/30">
-      {/* Sticky Visual Container */}
-      <div className="sticky top-0 h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="text-center space-y-8 max-w-4xl mx-auto px-6">
-          {/* Visual Indicator */}
-          <div className="text-8xl md:text-9xl animate-pulse">
-            {scenes[activeScene]?.visual}
+    <section className="relative bg-gradient-to-b from-background to-muted/30 py-24">
+      <div className="container">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
+              <CheckCircle className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Proven Results</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+              See How Automation Transforms Businesses
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Watch real business owners share their automation success stories and discover 
+              how the right technology can unlock unprecedented growth and efficiency.
+            </p>
           </div>
-          
-          {/* Scene Counter */}
-          <div className="flex justify-center space-x-2">
-            {scenes.map((_, index) => (
-              <div
-                key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === activeScene ? 'bg-primary w-8' : 'bg-muted-foreground/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
 
-      {/* Scrollable Text Content */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        {scenes.map((scene, index) => (
-          <div
-            key={scene.id}
-            ref={(el) => (textRefs.current[index] = el)}
-            className="h-screen flex items-center justify-start pl-8 md:pl-16"
-            style={{ top: `${(index / scenes.length) * 100}%` }}
-          >
-            <div
-              className={`max-w-md space-y-4 transition-all duration-500 pointer-events-auto ${
-                index === activeScene
-                  ? 'opacity-100 translate-x-0'
-                  : 'opacity-30 translate-x-4'
-              }`}
-            >
-              <div className="bg-card/90 backdrop-blur-sm rounded-2xl p-8 shadow-xl border">
-                <h3 className="text-lg font-semibold text-primary mb-4">
-                  {scene.title}
-                </h3>
-                <p className="text-xl leading-relaxed text-foreground">
-                  {scene.content}
-                </p>
-                
-                {/* CTA for final scene */}
-                {index === scenes.length - 1 && (
-                  <div className="mt-8 space-y-4">
-                    <p className="text-lg font-semibold text-primary">
-                      Ready to build better?
-                    </p>
-                    <Button asChild size="lg" className="w-full">
-                      <Link to="/contact">
-                        Get Your Blueprint
-                        <ArrowRight className="w-5 h-5 ml-2" />
-                      </Link>
-                    </Button>
+          {/* Video Container */}
+          <div className="relative mb-12">
+            <div className="relative aspect-video bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden shadow-2xl">
+              {/* Video Placeholder */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                <div className="text-center space-y-6">
+                  <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto animate-pulse">
+                    <Play className="w-12 h-12 text-primary ml-1" />
                   </div>
-                )}
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold text-primary">From Chaos to Control</h3>
+                    <p className="text-muted-foreground">See the transformation in action</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Play Button Overlay */}
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center group cursor-pointer hover:bg-black/30 transition-colors">
+                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Play className="w-8 h-8 text-primary-foreground ml-1" />
+                </div>
               </div>
             </div>
           </div>
-        ))}
+
+          {/* Call to Actions */}
+          <div className="text-center space-y-8">
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="font-semibold text-primary">Real Results</h4>
+                <p className="text-sm text-muted-foreground">Actual case studies from businesses like yours</p>
+              </div>
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="font-semibold text-primary">Proven Process</h4>
+                <p className="text-sm text-muted-foreground">Step-by-step automation implementation</p>
+              </div>
+              <div className="space-y-2">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="font-semibold text-primary">Fast ROI</h4>
+                <p className="text-sm text-muted-foreground">See returns within the first month</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="text-lg px-8">
+                Get Your Free Automation Assessment
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button variant="outline" size="lg" className="text-lg px-8">
+                Download Success Stories
+              </Button>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              Join 500+ businesses already saving 15+ hours per week with automation
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default ScrollytellingSection;
+export default VideoSection;
