@@ -97,10 +97,9 @@ const Index = () => {
       <section className="py-20 bg-background">
         <div className="container">
           <ScrollAnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Stop the Flood of Manual Work</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Is your workflow a messy stream? Like busy beavers, we use a 4-step blueprint to build you a dam good automated system.
-            </p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">From Logjam to Perfect Flow</h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">Is your workflow a messy stream? 
+Our expert beavers use a 4-step blueprint to build you a dam good automated system.</p>
           </ScrollAnimatedSection>
 
           {/* Timeline Container */}
@@ -157,7 +156,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground">Engineering the Flow</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">Using data from your 'river survey,' our master builders engineer the schematics for your automated dam, specifying the right 'bots' and core structure to handle your unique current.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">Using data from your 'river survey,' our master builders engineer the schematics for your automated dam. We then specify the right 'bots' and design the core structure to handle your unique current.</p>
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
