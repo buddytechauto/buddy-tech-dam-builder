@@ -117,9 +117,9 @@ const Index = () => {
                     <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
                       1
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Your Automation Blueprint</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Let's Map Your River</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">In our first call, we'll pinpoint your biggest time-wasters and design a clear strategy to reclaim your time and energy.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">This first 30-minute call is our scouting mission. We'll have a friendly chat to explore your business's unique flow, listen to your goals, and identify the exact 'logjams' causing you headaches. It's all about understanding your world before we even think about building.</p>
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
