@@ -103,68 +103,70 @@ const Index = () => {
             </p>
           </ScrollAnimatedSection>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            {/* Left Side - Content */}
-            <ScrollAnimatedSection className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
-                    1
+          {/* Timeline Container */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Vertical Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-px bg-gradient-to-b from-primary/30 via-primary to-primary/30 h-full z-0"></div>
+
+            {/* Step 1 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+              {/* Left Side - Content */}
+              <ScrollAnimatedSection className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
+                      1
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Your Automation Blueprint</h3>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Your Automation Blueprint</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">In our first call, we'll pinpoint your biggest time-wasters and design a clear strategy to reclaim your time and energy.</p>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed">In our first call, we'll pinpoint your biggest time-wasters and design a clear strategy to reclaim your time and energy.</p>
-              </div>
-              
-              <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link to="/contact">
-                  Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
-            </ScrollAnimatedSection>
+                
+                <Button asChild size="lg" className="text-lg px-8 py-6">
+                  <Link to="/contact">
+                    Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+              </ScrollAnimatedSection>
 
-            {/* Right Side - Image */}
-            <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
-              <div className="relative">
-                <img src="/lovable-uploads/51a5084a-9a85-4d35-bcdf-2b0a19e4d3e9.png" alt="Beaver automation blueprint visualization" className="w-full max-w-md rounded-2xl shadow-2xl" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
-              </div>
-            </ScrollAnimatedSection>
-          </div>
+              {/* Right Side - Image */}
+              <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+                <div className="relative">
+                  <img src="/lovable-uploads/51a5084a-9a85-4d35-bcdf-2b0a19e4d3e9.png" alt="Beaver automation blueprint visualization" className="w-full max-w-md rounded-2xl shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+                </div>
+              </ScrollAnimatedSection>
+            </div>
 
-          {/* Step Separator */}
-          <div className="flex justify-center my-16">
-            <div className="w-px h-16 bg-gradient-to-b from-primary/30 via-primary to-primary/30"></div>
-          </div>
+            {/* Step 2 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center mt-20 relative z-10">
+              {/* Left Side - Image */}
+              <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+                <div className="relative">
+                  <img src="/src/assets/beavers-building-robots.png" alt="Team of beavers building robots which are building the dam" className="w-full max-w-md rounded-2xl shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+                </div>
+              </ScrollAnimatedSection>
 
-          {/* Step 2 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mt-20">
-            {/* Left Side - Image */}
-            <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
-              <div className="relative">
-                <img src="/src/assets/beavers-building-robots.png" alt="Team of beavers building robots which are building the dam" className="w-full max-w-md rounded-2xl shadow-2xl" />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
-              </div>
-            </ScrollAnimatedSection>
-
-            {/* Right Side - Content */}
-            <ScrollAnimatedSection className="space-y-8">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
-                    2
+              {/* Right Side - Content */}
+              <ScrollAnimatedSection className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
+                      2
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Your Blueprint Comes to Life</h3>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Your Blueprint Comes to Life</h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">Using the plan from our chat, our team carefully assembles your automated dam, piece by piece, ensuring every part works in perfect harmony.</p>
                 </div>
-                <p className="text-lg text-muted-foreground leading-relaxed">Using the plan from our chat, our team carefully assembles your automated dam, piece by piece, ensuring every part works in perfect harmony.</p>
-              </div>
-              
-              <Button asChild size="lg" className="text-lg px-8 py-6">
-                <Link to="/contact">
-                  Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
-                </Link>
-              </Button>
-            </ScrollAnimatedSection>
+                
+                <Button asChild size="lg" className="text-lg px-8 py-6">
+                  <Link to="/contact">
+                    Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+              </ScrollAnimatedSection>
+            </div>
           </div>
         </div>
       </section>
