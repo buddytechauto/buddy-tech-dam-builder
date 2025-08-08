@@ -131,6 +131,36 @@ const Index = () => {
               </div>
             </ScrollAnimatedSection>
           </div>
+
+          {/* Step 2 */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mt-20">
+            {/* Left Side - Image */}
+            <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+              <div className="relative">
+                <img src="/src/assets/beavers-building-robots.png" alt="Team of beavers building robots which are building the dam" className="w-full max-w-md rounded-2xl shadow-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+              </div>
+            </ScrollAnimatedSection>
+
+            {/* Right Side - Content */}
+            <ScrollAnimatedSection className="space-y-8">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
+                    2
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Your Blueprint Comes to Life</h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">Using the plan from our chat, our team carefully assembles your automated dam, piece by piece, ensuring every part works in perfect harmony.</p>
+              </div>
+              
+              <Button asChild size="lg" className="text-lg px-8 py-6">
+                <Link to="/contact">
+                  Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+            </ScrollAnimatedSection>
+          </div>
         </div>
       </section>
 
