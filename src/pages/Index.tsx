@@ -155,9 +155,9 @@ const Index = () => {
                     <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
                       2
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Your Blueprint Comes to Life</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Engineering the Flow</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">Using the plan from our chat, our team carefully assembles your automated dam, piece by piece, ensuring every part works in perfect harmony.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">This is the technical design phase. Our master builders take the data from our 'river survey' and engineer the schematics for your automated dam. We specify the right materials (bots) and design the core structure to handle your business's unique current.</p>
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
