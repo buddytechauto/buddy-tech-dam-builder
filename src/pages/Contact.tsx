@@ -7,10 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Phone, Mail, MapPin, CheckCircle } from "lucide-react";
-
 const Contact = () => {
-  return (
-    <Layout>
+  return <Layout>
       <div className="container py-12">
         {/* Hero Section */}
         <ScrollAnimatedSection className="text-center mb-16">
@@ -68,20 +66,12 @@ const Contact = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="challenges">What's Your Biggest Time-Waster?</Label>
-                  <Textarea 
-                    id="challenges" 
-                    placeholder="Tell us about the repetitive tasks that eat up your time. The more specific, the better! For example: 'I spend 3 hours every Monday creating weekly reports' or 'Customer follow-ups are falling through the cracks.'"
-                    rows={4}
-                  />
+                  <Textarea id="challenges" placeholder="Tell us about the repetitive tasks that eat up your time. The more specific, the better! For example: 'I spend 3 hours every Monday creating weekly reports' or 'Customer follow-ups are falling through the cracks.'" rows={4} />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="goals">What Would Success Look Like?</Label>
-                  <Textarea 
-                    id="goals" 
-                    placeholder="If we could wave a magic wand and automate your biggest headaches, what would that free you up to do? How would it change your day-to-day?"
-                    rows={3}
-                  />
+                  <Textarea id="goals" placeholder="If we could wave a magic wand and automate your biggest headaches, what would that free you up to do? How would it change your day-to-day?" rows={3} />
                 </div>
 
                 <Button size="lg" className="w-full bg-accent hover:bg-accent/90">
@@ -138,14 +128,14 @@ const Contact = () => {
             <ScrollAnimatedSection animationDelay={400}>
               <Card>
               <CardHeader>
-                <CardTitle>Other Ways to Reach Us</CardTitle>
+                <CardTitle>More Ways to Chat</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-accent" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-sm text-muted-foreground">hello@buddytech.com</p>
+                    <p className="text-sm text-muted-foreground">tyson@buddytech.ca</p>
                   </div>
                 </div>
                 
@@ -153,7 +143,7 @@ const Contact = () => {
                   <Phone className="w-5 h-5 text-accent" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-sm text-muted-foreground">(555) 123-BUDDY</p>
+                    <p className="text-sm text-muted-foreground">(647) 385-6175</p>
                   </div>
                 </div>
                 
@@ -204,8 +194,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Contact;
