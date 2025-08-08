@@ -132,6 +132,11 @@ const Index = () => {
             </ScrollAnimatedSection>
           </div>
 
+          {/* Step Separator */}
+          <div className="flex justify-center my-16">
+            <div className="w-px h-16 bg-gradient-to-b from-primary/30 via-primary to-primary/30"></div>
+          </div>
+
           {/* Step 2 */}
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mt-20">
             {/* Left Side - Image */}
