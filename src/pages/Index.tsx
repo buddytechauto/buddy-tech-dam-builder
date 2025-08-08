@@ -177,7 +177,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground">Taming the Chaotic Current</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">With the plan set, we begin to reshape your workflow. This is the implementation phase where we build the structures that tame the chaotic currents of manual work, directing your tasks and data to flow exactly where they need to go—smoothly and without effort.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">With the plan set, the implementation phase begins. We build the automated structures that tame the chaotic currents of manual work, ensuring your data flows exactly where it needs to go.</p>
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
