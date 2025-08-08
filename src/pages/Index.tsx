@@ -215,7 +215,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground">The Dam is Declared Operational!</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">We officially launch your new system and watch your productivity flow like never before. After launch, we remain on hand to monitor, analyze, and continuously optimize performance, making sure your solution delivers powerful results now and into the future.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">We launch your new system, and as your productivity soars, we remain on hand to monitor, analyze, and optimize its performance for powerful, long-term results.</p>
                 </div>
               </ScrollAnimatedSection>
             </div>
