@@ -195,6 +195,39 @@ const Index = () => {
                 </div>
               </ScrollAnimatedSection>
             </div>
+
+            {/* Step 4 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center mt-20 relative z-10">
+              {/* Left Side - Image */}
+              <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+                <div className="relative">
+                  <img src="/src/assets/completed-dam-operational.png" alt="Impressive completed dam working perfectly with controlled water flow" className="w-full max-w-md rounded-2xl shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+                </div>
+              </ScrollAnimatedSection>
+
+              {/* Right Side - Content */}
+              <ScrollAnimatedSection className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
+                      4
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">The Dam is Declared Operational!</h3>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">We officially launch your new system and watch your productivity flow like never before. After launch, we remain on hand to monitor, analyze, and continuously optimize performance, making sure your solution delivers powerful results now and into the future.</p>
+                </div>
+              </ScrollAnimatedSection>
+            </div>
+
+            {/* Full-width CTA Button */}
+            <ScrollAnimatedSection className="mt-20">
+              <div className="text-center">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-24 py-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 w-full max-w-md">
+                  <Link to="/contact">Build my Automation</Link>
+                </Button>
+              </div>
+            </ScrollAnimatedSection>
           </div>
         </div>
       </section>
