@@ -119,7 +119,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground">Let's Map Your River</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">This first 30-minute call is our scouting mission. We'll have a friendly chat to explore your business's unique flow, listen to your goals, and identify the exact 'logjams' causing you headaches. It's all about understanding your world before we even think about building.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">In a friendly 30-minute chat, we'll explore your unique flow, listen to your goals, and pinpoint the exact 'logjams' causing you headaches.</p>
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
