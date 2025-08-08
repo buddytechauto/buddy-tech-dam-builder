@@ -72,9 +72,8 @@ const Blog = () => {
         <ScrollAnimatedSection className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">The Dam Builder's Journal</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Practical advice, real stories, and simple strategies to help you build 
-            a business that works smarter, not harder. No technical jargon, just 
-            friendly guidance from your automation buddies.
+            Practical advice, real stories, and simple strategies for navigating 
+            today's changing tech currents—all from your friendly automation buddies.
           </p>
         </ScrollAnimatedSection>
 
