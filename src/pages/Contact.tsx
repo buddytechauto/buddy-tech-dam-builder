@@ -12,11 +12,11 @@ const Contact = () => {
       <div className="container py-12">
         {/* Hero Section */}
         <ScrollAnimatedSection className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">Ready to Build Your Masterpiece?</h1>
+          <h1 className="text-4xl font-bold mb-4">Ready to Build Your Dam Good System?</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Every great dam starts with a conversation. Let's chat about your business, 
-            explore your challenges, and design the perfect automation solution. 
-            Our consultation is free, friendly, and completely jargon-free.
+            Every great dam starts with a conversation. 
+            Let's chat about your challenges and start drafting the blueprint for your perfect workflow. 
+            Our consultation is free, friendly, and jargon-free.
           </p>
         </ScrollAnimatedSection>
 
