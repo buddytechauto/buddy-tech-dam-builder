@@ -165,6 +165,36 @@ const Index = () => {
                 </Button>
               </ScrollAnimatedSection>
             </div>
+
+            {/* Step 3 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center mt-20 relative z-10">
+              {/* Left Side - Content */}
+              <ScrollAnimatedSection className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
+                      3
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Taming the Chaotic Current</h3>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">With the plan set, we begin to reshape your workflow. This is the implementation phase where we build the structures that tame the chaotic currents of manual work, directing your tasks and data to flow exactly where they need to go—smoothly and without effort.</p>
+                </div>
+                
+                <Button asChild size="lg" className="text-lg px-8 py-6">
+                  <Link to="/contact">
+                    Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+              </ScrollAnimatedSection>
+
+              {/* Right Side - Image */}
+              <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+                <div className="relative">
+                  <img src="/src/assets/robotic-arms-building-dam.png" alt="Robotic arms and drones building the dam with precision automation" className="w-full max-w-md rounded-2xl shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+                </div>
+              </ScrollAnimatedSection>
+            </div>
           </div>
         </div>
       </section>
