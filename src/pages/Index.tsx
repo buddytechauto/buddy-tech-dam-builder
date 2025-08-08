@@ -161,9 +161,7 @@ const Index = () => {
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
-                  <Link to="/contact">
-                    Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
+                  
                 </Button>
               </ScrollAnimatedSection>
             </div>
