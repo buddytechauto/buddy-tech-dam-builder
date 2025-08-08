@@ -91,6 +91,53 @@ const Index = () => {
         <ScrollytellingSection />
       </ScrollAnimatedSection>
 
+      {/* Tame Your To-Do List Section */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <ScrollAnimatedSection className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Tame Your To-Do List</h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Is your workflow a messy stream? Like busy beavers, we use a 4-step blueprint to build you a dam good automated system.
+            </p>
+          </ScrollAnimatedSection>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+            {/* Left Side - Content */}
+            <ScrollAnimatedSection className="space-y-8">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
+                    1
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Let's Map the Stream</h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  We'll start by exploring your current challenges. Then, we'll sketch out a custom automation blueprint to stop the leaks and boost your productivity.
+                </p>
+              </div>
+              
+              <Button asChild size="lg" className="text-lg px-8 py-6">
+                <Link to="/contact">
+                  Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+            </ScrollAnimatedSection>
+
+            {/* Right Side - Image */}
+            <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+              <div className="relative">
+                <img 
+                  src="/lovable-uploads/51a5084a-9a85-4d35-bcdf-2b0a19e4d3e9.png" 
+                  alt="Beaver automation blueprint visualization" 
+                  className="w-full max-w-md rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+              </div>
+            </ScrollAnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Features Block - White Background */}
       <section className="py-20 bg-card">
         <div className="container">
