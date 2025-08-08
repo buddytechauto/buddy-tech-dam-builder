@@ -119,7 +119,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground">Let's Map Your River</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">In a friendly 30-minute chat, we'll explore your unique flow, listen to your goals, and pinpoint the exact 'logjams' causing you headaches.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">This first 30-minute call is our scouting mission. We'll have a friendly chat to explore your business's unique flow, listen to your goals, and identify the exact 'logjams' causing you headaches. It's all about understanding your world before we even think about building.</p>
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
@@ -157,7 +157,7 @@ const Index = () => {
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground">Engineering the Flow</h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">Using data from your 'river survey,' our master builders engineer the schematics for your automated dam, specifying the right 'bots' and core structure to handle your unique current.</p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">This is the technical design phase. Our master builders take the data from our 'river survey' and engineer the schematics for your automated dam. We specify the right materials (bots) and design the core structure to handle your business's unique current.</p>
                 </div>
                 
                 <Button asChild size="lg" className="text-lg px-8 py-6">
@@ -165,6 +165,69 @@ const Index = () => {
                 </Button>
               </ScrollAnimatedSection>
             </div>
+
+            {/* Step 3 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center mt-20 relative z-10">
+              {/* Left Side - Content */}
+              <ScrollAnimatedSection className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
+                      3
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">Taming the Chaotic Current</h3>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">With the plan set, we begin to reshape your workflow. This is the implementation phase where we build the structures that tame the chaotic currents of manual work, directing your tasks and data to flow exactly where they need to go—smoothly and without effort.</p>
+                </div>
+                
+                <Button asChild size="lg" className="text-lg px-8 py-6">
+                  <Link to="/contact">
+                    Start My Blueprint <ArrowRight className="ml-2 w-5 h-5" />
+                  </Link>
+                </Button>
+              </ScrollAnimatedSection>
+
+              {/* Right Side - Image */}
+              <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+                <div className="relative">
+                  <img src="/src/assets/robotic-arms-building-dam.png" alt="Robotic arms and drones building the dam with precision automation" className="w-full max-w-md rounded-2xl shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+                </div>
+              </ScrollAnimatedSection>
+            </div>
+
+            {/* Step 4 */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center mt-20 relative z-10">
+              {/* Left Side - Image */}
+              <ScrollAnimatedSection animationDelay={200} className="flex justify-center">
+                <div className="relative">
+                  <img src="/src/assets/completed-dam-operational.png" alt="Impressive completed dam working perfectly with controlled water flow" className="w-full max-w-md rounded-2xl shadow-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent rounded-2xl" />
+                </div>
+              </ScrollAnimatedSection>
+
+              {/* Right Side - Content */}
+              <ScrollAnimatedSection className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold border-4 border-background shadow-lg">
+                      4
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground">The Dam is Declared Operational!</h3>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">We officially launch your new system and watch your productivity flow like never before. After launch, we remain on hand to monitor, analyze, and continuously optimize performance, making sure your solution delivers powerful results now and into the future.</p>
+                </div>
+              </ScrollAnimatedSection>
+            </div>
+
+            {/* Full-width CTA Button */}
+            <ScrollAnimatedSection className="mt-20">
+              <div className="text-center">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-xl px-24 py-8 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 w-full max-w-md">
+                  <Link to="/contact">Build my Automation</Link>
+                </Button>
+              </div>
+            </ScrollAnimatedSection>
           </div>
         </div>
       </section>
