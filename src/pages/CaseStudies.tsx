@@ -9,17 +9,17 @@ import { Clock, DollarSign, TrendingUp } from "lucide-react";
 const CaseStudies = () => {
   const caseStudies = [
     {
-      title: "The Marina Co.",
-      industry: "Marine Services",
-      challenge: "Spending 20 hours per week manually creating invoices and tracking payments",
-      solution: "Automated invoicing system that generates and sends invoices based on completed services",
+      title: "A Global Leader in Building Materials",
+      industry: "Construction",
+      challenge: "Every day, a constant stream of termination requests required a full day of manual searching across all applications, a process that was slow and prone to error.",
+      solution: "Our automated 'gatekeeper' reads HR reports and searches all apps, delivering a flawless, highly accurate report with screenshots for a perfect, compliant audit trail.",
       results: {
-        timeSaved: "19 hours/week",
-        costSavings: "$2,400/month",
-        efficiency: "95% faster processing"
+        timeSaved: "37 hours/week",
+        costSavings: "$5,500/month",
+        efficiency: "95% increase in data accuracy"
       },
-      quote: "I used to dread invoice day. Now I barely think about it – everything just happens automatically. It's like having a super-efficient assistant who never takes a day off.",
-      author: "Sarah M., Owner"
+      quote: "The ROI on this automation was immediate. We've reclaimed hundreds of hours of skilled work per month, and the process is not only faster but significantly more accurate. It's a clear win for our department's budget and productivity.",
+      author: "Chris P., IT Manager"
     },
     {
       title: "GreenThumb Landscaping",
