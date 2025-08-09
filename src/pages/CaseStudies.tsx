@@ -19,20 +19,20 @@ const CaseStudies = () => {
         efficiency: "95% increase in data accuracy"
       },
       quote: "The ROI on this automation was immediate. We've reclaimed hundreds of hours of skilled work per month, and the process is not only faster but significantly more accurate. It's a clear win for our department's budget and productivity.",
-      author: "Chris P. | IT Manager"
+      author: "Chris P.  |  IT Manager"
     },
     {
       title: "A Global Leader in Construction",
       industry: "Construction",
-      challenge: "Onboarding was a challenge, but sudden company acquisitions created a crisis. The IT team was buried under hundreds or thousands of manual account requests, a tedious and error-prone task that could halt all other projects for weeks.",
-      solution: "We fully automated the onboarding workflow, from request to resolution. The system autonomously processes new user tickets, builds accounts with precise security roles, and distributes personalized login credentials via email, requiring zero human intervention.",
+      challenge: "Onboarding during large acquisitions was a massive bottleneck. The IT team faced weeks of tedious, error-prone manual account creation, which put all other critical projects on hold.",
+      solution: "We built an automation that handles onboarding from start to finish. It processes tickets, creates accounts with correct security roles, and emails personalized login info directly to new users, requiring zero human intervention.",
       results: {
         timeSaved: "1-2/weeks",
         costSavings: "$7,400/month", 
         efficiency: "99% reduction in manual errors"
       },
-      quote: "During acquisitions, I used to have to pull my entire team off their projects for weeks to handle account creation. It was a morale killer. Now, the process runs on its own. My team stays focused on high-value work, and we can absorb a new company without missing a beat",
-      author: "Dustin B. | IT Manager"
+      quote: "Acquisitions used to mean weeks of tedious work that killed morale. Now, the process is automated, my team stays focused on high-value projects, and we absorb new companies without missing a beat.",
+      author: "Dustin B.  |  IT Manager"
     },
     {
       title: "Sunset Dental Practice",
