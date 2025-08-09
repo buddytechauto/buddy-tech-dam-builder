@@ -342,6 +342,15 @@ Our expert beavers use a 4-step blueprint to build you a dam good automated syst
                     And you absolutely don't need to be 'techy'—that's our job! We're your automation buddies. You explain the problem to us in plain English, and we handle all the technical building behind the scenes.
                   </AccordionContent>
                 </AccordionItem>
+
+                <AccordionItem value="item-7" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                    How secure is my data with your automations?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                    Your data's security is our top priority. Think of it this way: we build the 'dam' on your property, using your tools. The automation runs on secure servers that you control, and the data never leaves the trusted apps you already use (like Google Suite, QuickBooks, etc.). Your information flows through private, encrypted channels that we build, but it is never stored by us. You own the dam, you own the river, and you own the data—always.
+                  </AccordionContent>
+                </AccordionItem>
               </Accordion>
             </ScrollAnimatedSection>
           </div>
