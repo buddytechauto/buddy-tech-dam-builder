@@ -19,20 +19,20 @@ const CaseStudies = () => {
         efficiency: "95% increase in data accuracy"
       },
       quote: "The ROI on this automation was immediate. We've reclaimed hundreds of hours of skilled work per month, and the process is not only faster but significantly more accurate. It's a clear win for our department's budget and productivity.",
-      author: "Chris P., IT Manager"
+      author: "Chris P. | IT Manager"
     },
     {
-      title: "GreenThumb Landscaping",
-      industry: "Landscaping",
-      challenge: "Lost leads due to slow response times and inconsistent follow-up communications",
-      solution: "Automated lead nurturing system with instant responses and scheduled follow-ups",
+      title: "A Global Leader in Construction",
+      industry: "Construction",
+      challenge: "Onboarding was a challenge, but sudden company acquisitions created a crisis. The IT team was buried under hundreds or thousands of manual account requests, a tedious and error-prone task that could halt all other projects for weeks.",
+      solution: "We fully automated the onboarding workflow, from request to resolution. The system autonomously processes new user tickets, builds accounts with precise security roles, and distributes personalized login credentials via email, requiring zero human intervention.",
       results: {
-        timeSaved: "15 hours/week",
-        costSavings: "$1,800/month", 
-        efficiency: "40% more leads converted"
+        timeSaved: "1-2/weeks",
+        costSavings: "$7,400/month", 
+        efficiency: "99% reduction in manual errors"
       },
-      quote: "We went from losing customers because we couldn't keep up with follow-ups to having them thank us for our quick, professional responses. Our conversion rate has never been higher.",
-      author: "Mike D., Operations Manager"
+      quote: "During acquisitions, I used to have to pull my entire team off their projects for weeks to handle account creation. It was a morale killer. Now, the process runs on its own. My team stays focused on high-value work, and we can absorb a new company without missing a beat",
+      author: "Dustin B. | IT Manager"
     },
     {
       title: "Sunset Dental Practice",
