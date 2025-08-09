@@ -35,19 +35,6 @@ const CaseStudies = () => {
       author: "Dustin B.  |  IT Manager"
     },
     {
-      title: "Sunset Dental Practice",
-      industry: "Healthcare",
-      challenge: "Patient appointment reminders and rescheduling were consuming staff time and reducing efficiency",
-      solution: "Automated appointment management system with smart scheduling and patient communication",
-      results: {
-        timeSaved: "12 hours/week",
-        costSavings: "$1,500/month",
-        efficiency: "60% reduction in no-shows"
-      },
-      quote: "Our front desk team can now focus on patient care instead of constantly making reminder calls. Plus, patients love the convenience of the automated system.",
-      author: "Dr. Lisa K., Practice Owner"
-    },
-    {
       title: "CraftBrew Distribution",
       industry: "Food & Beverage",
       challenge: "Complex inventory tracking and order processing across multiple channels was causing errors and delays",
