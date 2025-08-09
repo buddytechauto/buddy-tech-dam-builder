@@ -6,6 +6,7 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Clock, DollarSign, TrendingUp, Users } from "lucide-react";
 import riverBackground from "@/assets/river-background.jpg";
@@ -266,6 +267,84 @@ Our expert beavers use a 4-step blueprint to build you a dam good automated syst
           <ScrollAnimatedSection>
             <TimeCalculator />
           </ScrollAnimatedSection>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <ScrollAnimatedSection className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Frequently Asked Questions</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Got questions about automation? We've got answers.
+            </p>
+          </ScrollAnimatedSection>
+
+          <div className="max-w-4xl mx-auto">
+            <ScrollAnimatedSection>
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                    What exactly is an automation, anyway?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                    Think of an automation as your own personal beaver crew working behind the scenes, 24/7. It's a smart system we build that connects the apps you already use (like your email, accounting software, and CRM). When a new "log"—like a new sale or a filled-out contact form—enters the stream, your automation crew instantly directs it where it needs to go, all without you lifting a finger.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                    My business has a very specific process. Can you really build something custom for me?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                    Absolutely. In fact, custom is the only way we work. Every river has a unique flow, so every dam we build is designed from a custom blueprint. During our initial "Map Your River" call, we learn all about your specific challenges, goals, and the tools you use. We build solutions that fit your business like a glove, not the other way around.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                    This sounds complicated and expensive. Is it?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                    It's not complicated for you—that's why we're your buddies! We handle all the technical "engineering" and heavy lifting. Our goal is to make the process feel simple and exciting for you.
+                    <br /><br />
+                    As for cost, think of it as an investment in getting your time back. We design solutions to fit different budgets, and our focus is always on building a 'dam' that saves you far more in time and money than it costs. We're very transparent about pricing after our initial chat.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                    How long does it take to build our 'dam'?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                    The timeline depends on the complexity of the workflow we're building. A simple 'dam' to automate a single, clear task can be up and running very quickly. A more complex system connecting many apps will naturally take a bit longer to engineer perfectly. After our initial "Map Your River" call, we'll have a clear picture of the scope and will give you a detailed project timeline in our proposal.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                    What happens after the automation is built? Are we on our own?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                    Never! We don't just build the dam and walk away. Our most popular service is our ongoing support, what we call our "Beaver Buddy on Watch" program. We stick around to monitor performance, make optimizations, and ensure your automated workflows continue to run smoothly and adapt as your business grows. We're your long-term partners in efficiency.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-6" className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                    Is my business big enough (or 'techy' enough) for automation?
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                    That's a question we hear all the time, and the answer is almost always yes. It's a common myth that automation is only for huge, tech-savvy corporations.
+                    <br /><br />
+                    The real question isn't about the size of your company; it's about the size of your 'logjams.' Do you have tasks you do over and over again? That's your opportunity. We've built simple, powerful 'dams' for one-person businesses and complex systems for large teams. The goal is always the same: to save you time and headaches.
+                    <br /><br />
+                    And you absolutely don't need to be 'techy'—that's our job! We're your automation buddies. You explain the problem to us in plain English, and we handle all the technical building behind the scenes.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </ScrollAnimatedSection>
+          </div>
         </div>
       </section>
 

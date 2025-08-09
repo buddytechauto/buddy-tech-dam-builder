@@ -55,6 +55,11 @@ const ScrollytellingSection = () => {
     stepNumber: null,
     cta: true
   }];
-  return;
+  
+  return (
+    <div className="py-20 bg-background">
+      {/* This component will be implemented in the future */}
+    </div>
+  );
 };
 export default ScrollytellingSection;
